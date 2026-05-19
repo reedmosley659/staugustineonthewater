@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   const year = new Date().getFullYear();
 
@@ -14,24 +16,24 @@ export function Footer() {
             </p>
           </div>
           <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-            <a
-              href="#"
+            <Link
+              href="/privacy-policy"
               className="text-sm text-navy/70 transition-colors hover:text-teal"
             >
               Privacy Policy
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              href="/terms"
               className="text-sm text-navy/70 transition-colors hover:text-teal"
             >
               Terms
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              href="/#contact"
               className="text-sm text-navy/70 transition-colors hover:text-teal"
             >
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
         <p className="mt-10 text-center text-xs text-navy/50">

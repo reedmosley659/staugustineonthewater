@@ -2,17 +2,42 @@ import Image from "next/image";
 import { Header } from "./Header";
 import { Button } from "./Button";
 
+const heroPanels = [
+  {
+    src: "https://images.unsplash.com/photo-1605281317010-0f5e7d2052c6?q=80&w=1200&auto=format&fit=crop",
+    alt: "Social boating day with friends on calm coastal waters",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1505118382757-91b693fcc068?q=80&w=1200&auto=format&fit=crop",
+    alt: "Sailboat at golden hour on a sunset cruise",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1200&auto=format&fit=crop",
+    alt: "Fishing charter on open water at sunrise",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop",
+    alt: "Sailing charter along the coast",
+  },
+] as const;
+
 export function Hero() {
   return (
     <section className="relative min-h-[92vh] overflow-hidden">
-      <Image
-        src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
-        alt="Calm coastal waters at sunset near St. Augustine"
-        fill
-        priority
-        className="object-cover object-center"
-        sizes="100vw"
-      />
+      <div className="absolute inset-0 grid grid-cols-2 grid-rows-2">
+        {heroPanels.map((panel, index) => (
+          <div key={panel.alt} className="relative overflow-hidden">
+            <Image
+              src={panel.src}
+              alt={panel.alt}
+              fill
+              priority={index < 2}
+              className="object-cover object-center"
+              sizes="50vw"
+            />
+          </div>
+        ))}
+      </div>
       <div className="absolute inset-0 bg-gradient-to-b from-navy/70 via-navy/50 to-navy/85" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(45,90,107,0.35)_0%,_transparent_55%)]" />
 
@@ -34,7 +59,9 @@ export function Hero() {
             <Button as="a" href="#experiences" variant="primary">
               Explore Experiences
             </Button>
-            <Button variant="secondary">Coming Soon</Button>
+            <Button as="a" href="#contact" variant="secondary">
+              Contact Us
+            </Button>
           </div>
         </div>
 

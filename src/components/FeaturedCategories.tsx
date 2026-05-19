@@ -2,7 +2,7 @@ const categories = [
   {
     title: "Private Boat Rentals",
     description:
-      "Explore the waterways at your own pace with vetted rental operators offering well-maintained vessels.",
+      "Explore the waterways at your own pace with popular private boat and pontoon rentals in the area.",
     icon: BoatIcon,
   },
   {
@@ -43,7 +43,7 @@ export function FeaturedCategories() {
             Featured Experience Categories
           </h2>
           <p className="mt-4 text-base leading-relaxed text-navy/70">
-            Curated water-based activities to help you plan the perfect day on
+            Featured water-based activities to help you plan the perfect day on
             the water in America&apos;s oldest city.
           </p>
         </div>

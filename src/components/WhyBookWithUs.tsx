@@ -1,8 +1,8 @@
 const reasons = [
   {
-    title: "Curated Operators",
+    title: "Featured Experiences",
     description:
-      "We partner with reputable local operators so you can book with confidence.",
+      "Discover popular water activities and local recommendations in one place.",
   },
   {
     title: "Local Insight",
@@ -35,7 +35,7 @@ export function WhyBookWithUs() {
             </h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-navy/70">
               St Augustine On The Water is built for travelers who want a
-              trustworthy starting point for planning their time on the water —
+              helpful starting point for planning their time on the water —
               without the noise of generic travel sites.
             </p>
           </div>

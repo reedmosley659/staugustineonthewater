@@ -17,8 +17,9 @@ export function About() {
         </p>
         <p className="mt-4 text-base leading-relaxed text-white/70">
           Whether you are planning a romantic evening on the water, a family
-          adventure, or a seasonal holiday cruise, we bring together trusted
-          local operators so you can explore with confidence.
+          adventure, or a seasonal holiday cruise, we highlight featured
+          experiences and local favorites to help you plan your time on the
+          water.
         </p>
       </div>
     </section>
