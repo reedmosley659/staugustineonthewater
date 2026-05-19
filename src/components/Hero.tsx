@@ -4,19 +4,19 @@ import { Button } from "./Button";
 
 const heroPanels = [
   {
-    src: "https://images.unsplash.com/photo-1605281317010-0f5e7d2052c6?q=80&w=1200&auto=format&fit=crop",
+    src: "/hero/social-boating.jpg",
     alt: "Social boating day with friends on calm coastal waters",
   },
   {
-    src: "https://images.unsplash.com/photo-1505118382757-91b693fcc068?q=80&w=1200&auto=format&fit=crop",
+    src: "/hero/sunset-cruise.jpg",
     alt: "Sailboat at golden hour on a sunset cruise",
   },
   {
-    src: "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1200&auto=format&fit=crop",
+    src: "/hero/fishing-charter.jpg",
     alt: "Fishing charter on open water at sunrise",
   },
   {
-    src: "https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?q=80&w=1200&auto=format&fit=crop",
+    src: "/hero/pontoon-rental.jpg",
     alt: "Sailing charter along the coast",
   },
 ] as const;
