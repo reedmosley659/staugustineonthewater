@@ -4,20 +4,20 @@ import { Button } from "./Button";
 
 const heroPanels = [
   {
-    src: "/hero/social-boating.jpg",
-    alt: "Social boating day with friends on calm coastal waters",
+    src: "/hero/StAug-Sunset.jpg",
+    alt: "St. Augustine sunset over the water",
   },
   {
-    src: "/hero/sunset-cruise.jpg",
-    alt: "Sailboat at golden hour on a sunset cruise",
+    src: "/hero/Dolphin-cruise.jpg",
+    alt: "Dolphin cruise experience on the water",
   },
   {
-    src: "/hero/fishing-charter.jpg",
-    alt: "Fishing charter on open water at sunrise",
+    src: "/hero/Boat-Drinking.jpg",
+    alt: "Friends enjoying a boat day",
   },
   {
-    src: "/hero/pontoon-rental.jpg",
-    alt: "Sailing charter along the coast",
+    src: "/hero/tiki-boat.jpg",
+    alt: "Tiki boat cruise experience",
   },
 ] as const;
 
