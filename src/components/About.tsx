@@ -10,16 +10,15 @@ export function About() {
           Your Guide to St. Augustine&apos;s Waters
         </h2>
         <p className="mt-6 text-base leading-relaxed text-white/80 sm:text-lg">
-          St Augustine On The Water helps visitors discover the best
-          water-based experiences in St. Augustine — from serene sunset cruises
-          along historic shorelines to thrilling dolphin encounters and
-          professionally guided fishing trips.
+          St Augustine On The Water helps visitors compare and discover
+          water-based experiences in St. Augustine, including boat rentals,
+          sunset cruises, dolphin tours, fishing charters, and seasonal cruises.
         </p>
         <p className="mt-4 text-base leading-relaxed text-white/70">
           Whether you are planning a romantic evening on the water, a family
           adventure, or a seasonal holiday cruise, we highlight featured
-          experiences and local favorites to help you plan your time on the
-          water.
+          experiences and local recommendations to help you plan your time on
+          the water.
         </p>
       </div>
     </section>

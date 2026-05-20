@@ -36,7 +36,11 @@ export function Footer() {
             </Link>
           </nav>
         </div>
-        <p className="mt-10 text-center text-xs text-navy/50">
+        <p className="mx-auto mt-8 max-w-2xl text-center text-xs leading-relaxed text-navy/45">
+          St Augustine On The Water may earn a commission when visitors book
+          experiences through links on this site.
+        </p>
+        <p className="mt-6 text-center text-xs text-navy/50">
           &copy; {year} St Augustine On The Water. All rights reserved.
         </p>
       </div>

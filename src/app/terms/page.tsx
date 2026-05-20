@@ -11,7 +11,7 @@ export default function TermsPage() {
   return (
     <LegalPageShell title="Terms of Use">
       <p>
-        <strong>Last updated:</strong> May 18, 2026
+        <strong>Last updated:</strong> May 19, 2026
       </p>
       <p>
         These Terms of Use (&quot;Terms&quot;) govern your access to and use of
@@ -25,12 +25,13 @@ export default function TermsPage() {
           Nature of Our Service
         </h2>
         <p className="mt-3">
-          St Augustine On The Water is an informational and discovery platform
-          that highlights water-based activities and experiences in St.
-          Augustine, Florida. We are not a boat operator, charter company, or
-          direct booking provider unless expressly stated otherwise. Listings,
-          descriptions, and availability may change and are provided for general
-          planning purposes.
+          St Augustine On The Water is a water experience discovery and referral
+          site that highlights featured experiences and popular water activities
+          in St. Augustine, Florida. We help visitors compare options and may
+          link to third-party operators for booking. We are not a boat operator,
+          charter company, or direct provider of the experiences listed on the
+          Site unless expressly stated otherwise. Listings, descriptions, and
+          availability may change and are provided for general planning purposes.
         </p>
       </section>
 
@@ -39,10 +40,11 @@ export default function TermsPage() {
           No Endorsement or Guarantee
         </h2>
         <p className="mt-3">
-          References to experiences, providers, or activities on the Site do not
-          constitute an endorsement, guarantee, or verification of any third
-          party. You are responsible for evaluating providers, reading their
-          terms, confirming licenses and insurance where applicable, and making
+          References to experiences, providers, or activities on the Site are
+          informational and do not constitute an endorsement, guarantee, or
+          verification of any third party. You are responsible for reviewing each
+          operator&apos;s terms, policies, pricing, and safety requirements before
+          booking, confirming licenses and insurance where applicable, and making
           your own booking decisions.
         </p>
       </section>
@@ -52,11 +54,25 @@ export default function TermsPage() {
           Third-Party Services and Affiliate Links
         </h2>
         <p className="mt-3">
-          The Site may include links to third-party websites, booking tools, or
-          affiliate partners. We may receive compensation when you click certain
-          links or complete bookings through partners. We are not responsible for
+          The Site may include third-party booking links to independent operators
+          or booking platforms. St Augustine On The Water may earn a commission
+          when visitors book experiences through links on this site. We may also
+          receive referral or affiliate compensation when you click certain links
+          or complete bookings through third parties. We are not responsible for
           third-party content, pricing, cancellations, safety practices, or
           disputes arising from services booked elsewhere.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="font-display text-xl font-semibold text-navy">
+          Affiliate Disclosure
+        </h2>
+        <p className="mt-3">
+          St Augustine On The Water may earn a commission when visitors book
+          experiences through links on this site. Affiliate relationships do not
+          affect the price you pay to third-party operators, and they do not
+          represent an endorsement of any specific provider.
         </p>
       </section>
 

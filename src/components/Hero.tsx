@@ -49,7 +49,7 @@ export function Hero() {
             St. Augustine, Florida
           </p>
           <h1 className="font-display text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-            Discover the Best Water Experiences in St. Augustine
+            Discover Water Experiences in St. Augustine
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
             From private boat rentals and sunset cruises to dolphin tours,

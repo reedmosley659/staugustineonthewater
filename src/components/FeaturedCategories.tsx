@@ -65,7 +65,7 @@ export function FeaturedCategories() {
                   {category.description}
                 </p>
                 <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold">
-                  Coming Soon
+                  Experiences Coming Soon
                   <ArrowIcon />
                 </span>
               </article>

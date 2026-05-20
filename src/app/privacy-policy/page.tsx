@@ -11,14 +11,15 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPageShell title="Privacy Policy">
       <p>
-        <strong>Last updated:</strong> May 18, 2026
+        <strong>Last updated:</strong> May 19, 2026
       </p>
       <p>
         St Augustine On The Water (&quot;we,&quot; &quot;us,&quot; or
-        &quot;our&quot;) operates a tourism experience discovery website that
-        helps visitors learn about water-based activities in St. Augustine,
-        Florida. This Privacy Policy explains how we collect, use, and protect
-        information when you visit our website.
+        &quot;our&quot;) operates a water experience discovery and referral
+        website that helps visitors compare and learn about water-based
+        activities in St. Augustine, Florida. We are not the direct operator of
+        listed experiences. This Privacy Policy explains how we collect, use,
+        and protect information when you visit our website.
       </p>
 
       <section>
@@ -51,10 +52,15 @@ export default function PrivacyPolicyPage() {
           Third-Party Links and Affiliates
         </h2>
         <p className="mt-3">
-          Our website may link to third-party experience providers, booking
-          platforms, or affiliate partners. Those sites have their own privacy
-          policies, and we are not responsible for their practices. Information
-          you provide to a third party is governed by that party&apos;s policies.
+          Our website may include third-party booking links provided by
+          independent operators or booking platforms. We may earn affiliate or
+          referral commissions when you use certain links, as described in our{" "}
+          <a href="/terms" className="text-teal underline-offset-2 hover:underline">
+            Terms of Use
+          </a>
+          . Those third-party sites have their own privacy policies, and we are
+          not responsible for their practices. Information you provide to a third
+          party is governed by that party&apos;s policies.
         </p>
       </section>
 

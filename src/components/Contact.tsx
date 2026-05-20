@@ -9,9 +9,9 @@ export function Contact() {
           Get in Touch
         </h2>
         <p className="mt-4 text-base leading-relaxed text-navy/70">
-          Questions about experiences or partnership opportunities? We would
-          love to hear from you. Our team is preparing full booking listings —
-          reach out in the meantime.
+          Questions about featured experiences or this site? We would love to
+          hear from you. Our team is preparing full booking listings — reach out
+          in the meantime.
         </p>
         <a
           href="mailto:hello@staugustineonthewater.com"

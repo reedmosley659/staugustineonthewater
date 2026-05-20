@@ -10,9 +10,9 @@ const reasons = [
       "Our recommendations reflect deep familiarity with St. Augustine's waterways and seasons.",
   },
   {
-    title: "Premium Experiences",
+    title: "Popular Activities",
     description:
-      "We focus on quality outings — from intimate sunset sails to well-equipped fishing charters.",
+      "Explore popular water activities — from sunset sails to fishing charters on local waters.",
   },
   {
     title: "Easy Comparison",

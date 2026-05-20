@@ -17,7 +17,7 @@ const sourceSans = Source_Sans_3({
 export const metadata: Metadata = {
   title: "St Augustine On The Water | Water Experiences in St. Augustine, FL",
   description:
-    "Discover the best water-based experiences in St. Augustine, Florida — private boat rentals, sunset cruises, dolphin tours, fishing charters, and more.",
+    "Compare and discover water-based experiences in St. Augustine, Florida — boat rentals, sunset cruises, dolphin tours, fishing charters, and seasonal cruises.",
 };
 
 export default function RootLayout({
