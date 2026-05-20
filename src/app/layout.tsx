@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
+import {
+  getSiteUrl,
+  siteDescription,
+  siteName,
+  siteTitle,
+} from "@/lib/site";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -15,9 +21,24 @@ const sourceSans = Source_Sans_3({
 });
 
 export const metadata: Metadata = {
-  title: "St Augustine On The Water | Water Experiences in St. Augustine, FL",
-  description:
-    "Compare and discover water-based experiences in St. Augustine, Florida — boat rentals, sunset cruises, dolphin tours, fishing charters, and seasonal cruises.",
+  metadataBase: getSiteUrl(),
+  title: {
+    default: siteTitle,
+    template: `%s | ${siteName}`,
+  },
+  description: siteDescription,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName,
+    title: siteTitle,
+    description: siteDescription,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+  },
 };
 
 export default function RootLayout({
