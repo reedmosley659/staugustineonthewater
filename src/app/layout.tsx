@@ -1,11 +1,8 @@
-import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
-import {
-  getSiteUrl,
-  siteDescription,
-  siteName,
-  siteTitle,
-} from "@/lib/site";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { StructuredData } from "@/components/StructuredData";
+import { createRootMetadata } from "@/lib/metadata";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -20,26 +17,7 @@ const sourceSans = Source_Sans_3({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: getSiteUrl(),
-  title: {
-    default: siteTitle,
-    template: `%s | ${siteName}`,
-  },
-  description: siteDescription,
-  openGraph: {
-    type: "website",
-    locale: "en_US",
-    siteName,
-    title: siteTitle,
-    description: siteDescription,
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: siteTitle,
-    description: siteDescription,
-  },
-};
+export const metadata = createRootMetadata();
 
 export default function RootLayout({
   children,
@@ -51,7 +29,13 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${sourceSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <StructuredData />
+        <Suspense fallback={null}>
+          <GoogleAnalytics />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 }

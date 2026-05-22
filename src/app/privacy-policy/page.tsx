@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { LegalPageShell } from "@/components/LegalPageShell";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | St Augustine On The Water",
+export const metadata = createPageMetadata({
+  title: "Privacy Policy",
   description:
     "Privacy policy for St Augustine On The Water, a tourism experience discovery website.",
-};
+  path: "/privacy-policy",
+});
 
 export default function PrivacyPolicyPage() {
   return (

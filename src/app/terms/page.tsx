@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
 import { LegalPageShell } from "@/components/LegalPageShell";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "Terms of Use | St Augustine On The Water",
+export const metadata = createPageMetadata({
+  title: "Terms of Use",
   description:
     "Terms of use for St Augustine On The Water, a tourism experience discovery website.",
-};
+  path: "/terms",
+});
 
 export default function TermsPage() {
   return (
