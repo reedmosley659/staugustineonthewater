@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+**St Augustine On The Water** is an FHDN affiliate tourism site focused on converting organic traffic into water-experience bookings. Content, SEO, and CRO constraints live in **[docs/fhdn-seo-cro-rules.md](docs/fhdn-seo-cro-rules.md)** (also referenced from [AGENTS.md](AGENTS.md) for AI assistants).
+
 ## Getting Started
 
 First, run the development server:
