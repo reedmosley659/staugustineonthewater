@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { getRelatedPages } from "@/lib/experience-pages";
+import { affiliateDisclosure, getSiteUrl, siteName } from "@/lib/site";
 import { Footer } from "./Footer";
 
 export type ExperienceSection = {
@@ -27,8 +28,6 @@ export type ExperienceLandingPageProps = {
   whatToExpect: ExperienceSection[];
   howToChoose: ExperienceSection[];
   faqs: ExperienceFaq[];
-  ctaHeading?: string;
-  ctaDescription?: string;
 };
 
 export function ExperienceLandingPage({
@@ -41,13 +40,51 @@ export function ExperienceLandingPage({
   whatToExpect,
   howToChoose,
   faqs,
-  ctaHeading = "Booking Listings Coming Soon",
-  ctaDescription = "We are building curated booking listings for St. Augustine water experiences. Check back soon to compare options and book directly.",
 }: ExperienceLandingPageProps) {
   const relatedPages = getRelatedPages(path);
+  const pageUrl = new URL(path, getSiteUrl()).toString();
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: siteName,
+            item: getSiteUrl().origin,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: title,
+            item: pageUrl,
+          },
+        ],
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      },
+    ],
+  };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <header className="border-b border-sand-dark bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
           <Link href="/" className="group flex flex-col">
@@ -59,10 +96,10 @@ export function ExperienceLandingPage({
             </span>
           </Link>
           <Link
-            href="/"
+            href="/#experiences"
             className="text-sm font-medium text-teal transition-colors hover:text-navy"
           >
-            Back to Home
+            Compare Experiences
           </Link>
         </div>
       </header>
@@ -148,18 +185,19 @@ export function ExperienceLandingPage({
 
       <section className="bg-navy py-16 lg:py-24">
         <div className="mx-auto max-w-2xl px-6 text-center lg:px-8">
-          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-gold-light">
-            Coming Soon
-          </p>
-          <h2 className="font-display mt-3 text-3xl font-semibold text-white sm:text-4xl">
-            {ctaHeading}
+          <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">
+            Compare St. Augustine Water Experiences
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/80">
-            {ctaDescription}
+            View options for families, couples, and groups — or browse related
+            guides below to plan a better day on the water.
           </p>
-          <span className="mt-8 inline-flex items-center justify-center rounded-sm border border-white/25 bg-white/10 px-10 py-4 text-sm font-semibold uppercase tracking-wide text-white/90 backdrop-blur-sm">
-            Book Now — Listings Coming Soon
-          </span>
+          <Link
+            href="/#experiences"
+            className="mt-8 inline-flex min-h-[3rem] items-center justify-center rounded-sm bg-gold px-10 py-4 text-sm font-semibold uppercase tracking-wide text-navy shadow-lg shadow-navy/20 transition-all hover:bg-gold-light"
+          >
+            Compare Water Experiences
+          </Link>
         </div>
       </section>
 
@@ -167,14 +205,14 @@ export function ExperienceLandingPage({
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-              Explore More
+              Related Guides
             </p>
             <h2 className="font-display mt-3 text-3xl font-semibold text-navy sm:text-4xl">
               More St. Augustine Water Experiences
             </h2>
             <p className="mt-4 text-base leading-relaxed text-navy/70">
-              Planning more than one activity? Browse our other guides to
-              compare water experiences in the area.
+              Planning more than one activity? Browse other guides to compare
+              water experiences in the area.
             </p>
           </div>
 
@@ -183,7 +221,7 @@ export function ExperienceLandingPage({
               <li key={page.href}>
                 <Link
                   href={page.href}
-                  className="group flex h-full flex-col rounded-sm border border-sand-dark/80 bg-white p-8 shadow-sm transition-all duration-300 hover:border-teal/20 hover:shadow-lg hover:shadow-navy/5"
+                  className="group flex h-full min-h-[12rem] flex-col rounded-sm border border-sand-dark/80 bg-white p-8 shadow-sm transition-all duration-300 hover:border-teal/20 hover:shadow-lg hover:shadow-navy/5"
                 >
                   <h3 className="font-display text-xl font-semibold text-navy transition-colors group-hover:text-teal">
                     {page.title}
@@ -191,8 +229,8 @@ export function ExperienceLandingPage({
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-navy/65">
                     {page.description}
                   </p>
-                  <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold">
-                    Read Guide
+                  <span className="mt-6 inline-flex min-h-[2.75rem] items-center text-xs font-semibold uppercase tracking-wider text-gold">
+                    Compare Options
                     <ArrowIcon />
                   </span>
                 </Link>
@@ -204,9 +242,7 @@ export function ExperienceLandingPage({
 
       <div className="border-t border-sand-dark bg-sand px-6 py-8 lg:px-8">
         <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-navy/55">
-          St Augustine On The Water may earn a commission when visitors book
-          experiences through links on this site. We do not operate boats or
-          tours directly.
+          {affiliateDisclosure} We do not operate boats or tours directly.
         </p>
       </div>
 

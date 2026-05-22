@@ -16,7 +16,7 @@ export default function StAugustineNightsOfLightsBoatToursPage() {
       title="St Augustine Nights of Lights Boat Tours"
       heroImage={{
         src: "/hero/tiki-boat.jpg",
-        alt: "Boat tour on the water during evening in St. Augustine",
+        alt: "St Augustine Nights of Lights boat tour on the water",
       }}
       intro={
         <>

@@ -16,7 +16,7 @@ export default function StAugustineBoatRentalsPage() {
       title="St Augustine Boat Rentals"
       heroImage={{
         src: "/hero/pontoon-rental.jpg",
-        alt: "Pontoon boat rental on the water near St. Augustine",
+        alt: "St Augustine private boat rental on the Matanzas River",
       }}
       intro={
         <>
@@ -37,7 +37,7 @@ export default function StAugustineBoatRentalsPage() {
           </p>
           <p>
             This guide covers what to expect, who rentals work best for, and
-            how to compare options before booking listings appear on this site.
+            how to compare options before you book.
           </p>
         </>
       }

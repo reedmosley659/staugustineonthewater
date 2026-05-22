@@ -4,6 +4,14 @@ import { WhyBookWithUs } from "@/components/WhyBookWithUs";
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata({
+  title: "St Augustine Boat Rentals, Sunset Cruises & Water Experiences",
+  description:
+    "Compare St Augustine\u2019s best boat rentals, sunset cruises, dolphin tours, fishing charters, and seasonal water adventures.",
+  path: "/",
+});
 
 export default function Home() {
   return (

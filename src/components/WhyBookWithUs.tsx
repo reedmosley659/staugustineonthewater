@@ -1,42 +1,44 @@
+import { affiliateDisclosure } from "@/lib/site";
+
 const reasons = [
   {
-    title: "Featured Experiences",
+    title: "Curated Water Experiences",
     description:
-      "Discover popular water activities and local recommendations in one place.",
+      "Compare boat rentals, cruises, tours, and seasonal experiences in one focused St. Augustine guide.",
   },
   {
-    title: "Local Insight",
+    title: "Built for Visitors",
     description:
-      "Our recommendations reflect deep familiarity with St. Augustine's waterways and seasons.",
+      "Quickly narrow down the right experience for families, couples, groups, celebrations, or relaxing days on the water.",
   },
   {
-    title: "Popular Activities",
+    title: "Transparent Recommendations",
     description:
-      "Explore popular water activities — from sunset sails to fishing charters on local waters.",
+      "Some featured experiences may earn us a commission at no extra cost to you. We focus on useful recommendations, not clutter.",
   },
   {
-    title: "Easy Comparison",
+    title: "Updated for Seasonal Demand",
     description:
-      "Browse categories in one place and find the right water experience for your visit.",
+      "From summer boat days to Nights of Lights cruises, the guide can grow with seasonal St. Augustine travel demand.",
   },
 ];
 
 export function WhyBookWithUs() {
   return (
-    <section className="bg-white py-24 lg:py-32">
+    <section id="why-us" className="bg-white py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-              Why Us
+              Trust
             </p>
             <h2 className="font-display mt-3 text-3xl font-semibold text-navy sm:text-4xl">
-              Why Book With Us
+              Why Use St Augustine On The Water?
             </h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-navy/70">
-              St Augustine On The Water is built for travelers who want a
-              helpful starting point for planning their time on the water —
-              without the noise of generic travel sites.
+              A locally focused St. Augustine water experience guide — built to
+              help you compare options in one place and plan a better day on the
+              water.
             </p>
           </div>
 
@@ -55,6 +57,10 @@ export function WhyBookWithUs() {
             ))}
           </ul>
         </div>
+
+        <p className="mx-auto mt-16 max-w-2xl text-center text-xs leading-relaxed text-navy/55">
+          {affiliateDisclosure}
+        </p>
       </div>
     </section>
   );

@@ -5,19 +5,19 @@ import { Button } from "./Button";
 const heroPanels = [
   {
     src: "/hero/StAug-Sunset.jpg",
-    alt: "St. Augustine sunset over the water",
+    alt: "St Augustine sunset cruise near historic waterfront",
   },
   {
     src: "/hero/Dolphin-cruise.jpg",
-    alt: "Dolphin cruise experience on the water",
+    alt: "St Augustine dolphin tour on the water",
   },
   {
     src: "/hero/Boat-Drinking.jpg",
-    alt: "Friends enjoying a boat day",
+    alt: "St Augustine private boat rental at sunset",
   },
   {
     src: "/hero/tiki-boat.jpg",
-    alt: "Tiki boat cruise experience",
+    alt: "St Augustine tiki boat cruise on the water",
   },
 ] as const;
 
@@ -49,18 +49,19 @@ export function Hero() {
             St. Augustine, Florida
           </p>
           <h1 className="font-display text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-6xl xl:text-7xl">
-            Discover Water Experiences in St. Augustine
+            St Augustine Water Experiences, Boat Rentals &amp; Cruises
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
-            From private boat rentals and sunset cruises to dolphin tours,
-            fishing charters, and seasonal waterfront experiences.
+            Compare boat rentals, sunset cruises, dolphin tours, seasonal
+            cruises, and other unforgettable ways to experience St. Augustine
+            from the water.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button as="a" href="#experiences" variant="primary">
-              Explore Experiences
+              Compare Water Experiences
             </Button>
-            <Button as="a" href="#contact" variant="secondary">
-              Contact Us
+            <Button as="a" href="#why-us" variant="secondary">
+              Find Your Perfect Boat Day
             </Button>
           </div>
         </div>

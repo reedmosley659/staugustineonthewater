@@ -3,9 +3,13 @@ export const siteName = "St Augustine On The Water";
 export const siteTagline = "Water Experiences in St. Augustine, Florida";
 
 export const siteDescription =
-  "Compare and discover water-based experiences in St. Augustine, Florida — boat rentals, sunset cruises, dolphin tours, fishing charters, and seasonal cruises.";
+  "Compare St Augustine's best boat rentals, sunset cruises, dolphin tours, fishing charters, and seasonal water adventures.";
 
-export const siteTitle = `${siteName} | Boating & Water Experiences in St. Augustine`;
+export const siteTitle =
+  "St Augustine Boat Rentals, Sunset Cruises & Water Experiences | St Augustine On The Water";
+
+export const affiliateDisclosure =
+  "Some featured experiences may earn us a commission at no extra cost to you. We only feature experiences we believe travelers will find useful.";
 
 export function getSiteUrl(): URL {
   if (process.env.NEXT_PUBLIC_SITE_URL) {

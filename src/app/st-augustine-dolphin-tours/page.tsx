@@ -16,7 +16,7 @@ export default function StAugustineDolphinToursPage() {
       title="St Augustine Dolphin Tours"
       heroImage={{
         src: "/hero/Dolphin-cruise.jpg",
-        alt: "Dolphin tour on the water near St. Augustine",
+        alt: "St Augustine dolphin tour on the water",
       }}
       intro={
         <>

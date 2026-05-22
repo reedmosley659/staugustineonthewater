@@ -1,5 +1,8 @@
+import Link from "next/link";
+
 const navLinks = [
   { href: "#experiences", label: "Experiences" },
+  { href: "#why-us", label: "Why Us" },
   { href: "#about", label: "About" },
   { href: "#contact", label: "Contact" },
 ];
@@ -8,14 +11,14 @@ export function Header() {
   return (
     <header className="absolute inset-x-0 top-0 z-20">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">
-        <a href="#" className="group flex flex-col">
+        <Link href="/" className="group flex flex-col">
           <span className="font-display text-xl font-semibold tracking-wide text-white lg:text-2xl">
             St Augustine
           </span>
           <span className="text-[0.65rem] font-medium uppercase tracking-[0.25em] text-white/70 transition-colors group-hover:text-white/90">
             On The Water
           </span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (

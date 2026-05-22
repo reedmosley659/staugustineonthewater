@@ -16,7 +16,7 @@ export default function StAugustineSunsetCruisesPage() {
       title="St Augustine Sunset Cruises"
       heroImage={{
         src: "/hero/sunset-cruise.jpg",
-        alt: "Sunset cruise on the water near St. Augustine",
+        alt: "St Augustine sunset cruise near historic waterfront",
       }}
       intro={
         <>
