@@ -1,35 +1,42 @@
+import Link from "next/link";
+
 const categories = [
   {
     title: "Private Boat Rentals",
     description:
       "Explore the waterways at your own pace with popular private boat and pontoon rentals in the area.",
+    href: "/st-augustine-boat-rentals",
     icon: BoatIcon,
   },
   {
     title: "Sunset Cruises",
     description:
       "Experience golden-hour views along the Matanzas River and Atlantic coast from the water.",
+    href: "/st-augustine-sunset-cruises",
     icon: SunsetIcon,
   },
   {
     title: "Dolphin Tours",
     description:
       "Guided excursions to observe dolphins in their natural habitat with knowledgeable local captains.",
+    href: "/st-augustine-dolphin-tours",
     icon: DolphinIcon,
   },
   {
     title: "Fishing Charters",
     description:
       "Inshore and offshore fishing trips with experienced guides who know St. Augustine waters.",
+    href: null,
     icon: FishIcon,
   },
   {
     title: "Nights of Lights Cruises",
     description:
       "Seasonal waterfront cruises showcasing St. Augustine's famous holiday light display from the water.",
+    href: "/st-augustine-nights-of-lights-boat-tours",
     icon: LightsIcon,
   },
-];
+] as const;
 
 export function FeaturedCategories() {
   return (
@@ -54,21 +61,42 @@ export function FeaturedCategories() {
               key={category.title}
               className={index < 3 ? "lg:col-span-2" : "lg:col-span-3"}
             >
-              <article className="group flex h-full flex-col rounded-sm border border-sand-dark/80 bg-white p-8 shadow-sm transition-all duration-300 hover:border-teal/20 hover:shadow-lg hover:shadow-navy/5">
-                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-sm bg-mist text-teal transition-colors group-hover:bg-teal group-hover:text-white">
-                  <category.icon />
-                </div>
-                <h3 className="font-display text-xl font-semibold text-navy">
-                  {category.title}
-                </h3>
-                <p className="mt-3 flex-1 text-sm leading-relaxed text-navy/65">
-                  {category.description}
-                </p>
-                <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold">
-                  Experiences Coming Soon
-                  <ArrowIcon />
-                </span>
-              </article>
+              {category.href ? (
+                <Link
+                  href={category.href}
+                  className="group flex h-full flex-col rounded-sm border border-sand-dark/80 bg-white p-8 shadow-sm transition-all duration-300 hover:border-teal/20 hover:shadow-lg hover:shadow-navy/5"
+                >
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-sm bg-mist text-teal transition-colors group-hover:bg-teal group-hover:text-white">
+                    <category.icon />
+                  </div>
+                  <h3 className="font-display text-xl font-semibold text-navy">
+                    {category.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-navy/65">
+                    {category.description}
+                  </p>
+                  <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold">
+                    View Guide
+                    <ArrowIcon />
+                  </span>
+                </Link>
+              ) : (
+                <article className="group flex h-full flex-col rounded-sm border border-sand-dark/80 bg-white p-8 shadow-sm transition-all duration-300 hover:border-teal/20 hover:shadow-lg hover:shadow-navy/5">
+                  <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-sm bg-mist text-teal transition-colors group-hover:bg-teal group-hover:text-white">
+                    <category.icon />
+                  </div>
+                  <h3 className="font-display text-xl font-semibold text-navy">
+                    {category.title}
+                  </h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-navy/65">
+                    {category.description}
+                  </p>
+                  <span className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-wider text-gold">
+                    Experiences Coming Soon
+                    <ArrowIcon />
+                  </span>
+                </article>
+              )}
             </li>
           ))}
         </ul>
