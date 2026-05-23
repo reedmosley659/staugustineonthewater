@@ -1,15 +1,11 @@
 import type { MetadataRoute } from "next";
+import { experienceRoutes } from "@/lib/routes";
 import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = getSiteUrl().origin;
 
-  const experiencePages = [
-    "/st-augustine-boat-rentals",
-    "/st-augustine-sunset-cruises",
-    "/st-augustine-dolphin-tours",
-    "/st-augustine-nights-of-lights-boat-tours",
-  ] as const;
+  const experiencePagePaths = Object.values(experienceRoutes);
 
   return [
     {
@@ -18,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
-    ...experiencePages.map((path) => ({
+    ...experiencePagePaths.map((path) => ({
       url: `${baseUrl}${path}`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,

@@ -12,23 +12,23 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
-        source: "/boat-rentals-st-augustine",
-        destination: "/st-augustine-boat-rentals",
+        source: "/st-augustine-boat-rentals",
+        destination: "/boat-rentals-st-augustine",
         permanent: true,
       },
       {
-        source: "/sunset-cruises-st-augustine",
-        destination: "/st-augustine-sunset-cruises",
+        source: "/st-augustine-sunset-cruises",
+        destination: "/sunset-cruises-st-augustine",
         permanent: true,
       },
       {
-        source: "/dolphin-tours-st-augustine",
-        destination: "/st-augustine-dolphin-tours",
+        source: "/st-augustine-dolphin-tours",
+        destination: "/dolphin-tours-st-augustine",
         permanent: true,
       },
       {
-        source: "/nights-of-lights-boat-tours",
-        destination: "/st-augustine-nights-of-lights-boat-tours",
+        source: "/st-augustine-nights-of-lights-boat-tours",
+        destination: "/nights-of-lights-boat-tours",
         permanent: true,
       },
     ];

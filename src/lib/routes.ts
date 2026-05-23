@@ -1,4 +1,4 @@
-/** Public-facing SEO routes for monetizable experience pages. */
+/** Canonical SEO routes for monetizable experience pages. */
 export const experienceRoutes = {
   boatRentals: "/boat-rentals-st-augustine",
   sunsetCruises: "/sunset-cruises-st-augustine",
@@ -6,8 +6,8 @@ export const experienceRoutes = {
   nightsOfLights: "/nights-of-lights-boat-tours",
 } as const;
 
-/** Canonical page paths (existing routes; SEO aliases redirect here). */
-export const canonicalExperienceRoutes = {
+/** Legacy paths — permanently redirected to experienceRoutes in next.config.ts. */
+export const legacyExperienceRoutes = {
   boatRentals: "/st-augustine-boat-rentals",
   sunsetCruises: "/st-augustine-sunset-cruises",
   dolphinTours: "/st-augustine-dolphin-tours",

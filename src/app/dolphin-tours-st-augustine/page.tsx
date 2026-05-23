@@ -1,0 +1,179 @@
+import { ExperienceLandingPage } from "@/components/ExperienceLandingPage";
+import { createPageMetadata } from "@/lib/metadata";
+
+export const metadata = createPageMetadata({
+  title: "St Augustine Dolphin Tours",
+  description:
+    "Plan St Augustine dolphin tours with a practical guide to what you will see, how trips work, and how to choose a dolphin-watching cruise in the area.",
+  path: "/dolphin-tours-st-augustine",
+});
+
+export default function StAugustineDolphinToursPage() {
+  return (
+    <ExperienceLandingPage
+      path="/dolphin-tours-st-augustine"
+      eyebrow="St. Augustine, Florida"
+      title="St Augustine Dolphin Tours"
+      heroImage={{
+        src: "/hero/Dolphin-cruise.jpg",
+        alt: "St Augustine dolphin tour on the water",
+      }}
+      intro={
+        <>
+          <p>
+            St Augustine dolphin tours take visitors into the estuaries, river
+            channels, and coastal waters where Atlantic bottlenose dolphins
+            feed and travel. The Matanzas River, Salt Run, and nearby
+            Intracoastal stretches are common search areas for local tour
+            operators.
+          </p>
+          <p>
+            Dolphin-watching trips are typically guided excursions on smaller
+            boats or catamarans with a captain who knows where dolphins are
+            often spotted — though wildlife sightings are never guaranteed.
+            Most tours combine dolphin watching with commentary on St.
+            Augustine&apos;s history, ecology, and waterfront landmarks.
+          </p>
+          <p>
+            This guide explains what St Augustine dolphin tours usually involve,
+            who they work best for, and how to compare options before booking
+            listings are available here.
+          </p>
+        </>
+      }
+      bestFor={[
+        {
+          title: "Wildlife lovers",
+          description:
+            "Dolphin tours appeal to travelers who want to observe marine life in natural habitat rather than at a captive facility.",
+        },
+        {
+          title: "Families with school-age children",
+          description:
+            "Kids often enjoy spotting dolphins from the boat. Many tours are designed with families in mind and run at a moderate pace.",
+        },
+        {
+          title: "Nature-focused visitors",
+          description:
+            "Beyond dolphins, tours often pass marshland, bird habitat, and scenic stretches of the estuary — a good fit for eco-minded travelers.",
+        },
+        {
+          title: "Shorter activity windows",
+          description:
+            "Most dolphin tours run one to two hours, making them easy to fit into a half-day itinerary alongside downtown sightseeing.",
+        },
+        {
+          title: "Visitors who want local context",
+          description:
+            "Captains and guides often share stories about the area's ecology and history while searching for dolphins — adding depth to the experience.",
+        },
+        {
+          title: "Photographers with patience",
+          description:
+            "Dolphins move quickly and appearances are unpredictable. Travelers who enjoy wildlife photography often find these trips rewarding when conditions cooperate.",
+        },
+      ]}
+      whatToExpect={[
+        {
+          title: "One- to two-hour excursions",
+          description:
+            "Most St Augustine dolphin tours last 60 to 120 minutes, including time to search multiple areas where dolphins are commonly seen.",
+        },
+        {
+          title: "Wildlife sightings are not guaranteed",
+          description:
+            "Dolphins are wild animals. Operators know productive areas, but sightings depend on tides, weather, food sources, and animal behavior on any given day.",
+        },
+        {
+          title: "Smaller boats and catamarans",
+          description:
+            "Dolphin tours typically use vessels sized for 6 to 20 passengers, offering good viewing angles and a more personal feel than large sightseeing boats.",
+        },
+        {
+          title: "Estuary and river routes",
+          description:
+            "Trips often explore the Matanzas River, Salt Run, and Intracoastal channels — calmer water that suits both wildlife and comfortable cruising.",
+        },
+        {
+          title: "Captain commentary",
+          description:
+            "Expect narration about local ecology, dolphin behavior, and St. Augustine landmarks along the route. Quality and depth vary by operator.",
+        },
+        {
+          title: "Morning and midday departures",
+          description:
+            "Many tours run during daylight hours when visibility is best. Morning trips can be calmer; midday trips suit flexible schedules.",
+        },
+      ]}
+      howToChoose={[
+        {
+          title: "Set realistic wildlife expectations",
+          description:
+            "Choose a tour for the overall experience — scenery, commentary, time on the water — not only for a guaranteed dolphin encounter.",
+        },
+        {
+          title: "Compare trip length",
+          description:
+            "Shorter tours fit tight schedules; longer trips allow more time to search different areas and may improve sighting chances without promising results.",
+        },
+        {
+          title: "Check passenger limits",
+          description:
+            "Smaller groups mean easier viewing and less crowding at the rail. If a close-up experience matters, look for lower-capacity boats.",
+        },
+        {
+          title: "Review departure point",
+          description:
+            "Launch location affects travel time and route. Confirm parking, boarding procedures, and how early you should arrive.",
+        },
+        {
+          title: "Ask about age suitability",
+          description:
+            "Some boats have minimum age requirements or recommend certain trips for younger children. Verify policies if traveling with toddlers or infants.",
+        },
+        {
+          title: "Read cancellation and weather policies",
+          description:
+            "Wind and rough water can affect smaller vessels more than larger ones. Understand how rescheduling works before you pay.",
+        },
+      ]}
+      faqs={[
+        {
+          question: "Are dolphin sightings guaranteed on St Augustine tours?",
+          answer:
+            "No. Dolphins are wild animals and sightings depend on conditions on the day of your trip. Reputable operators know productive areas but cannot guarantee encounters.",
+        },
+        {
+          question: "What type of dolphins live near St. Augustine?",
+          answer:
+            "Atlantic bottlenose dolphins are the species most commonly seen on tours in the Matanzas River, Salt Run, and nearby coastal waters.",
+        },
+        {
+          question: "How long do dolphin tours usually last?",
+          answer:
+            "Most St Augustine dolphin tours run about one to two hours. Shorter trips focus on nearby search areas; longer trips may cover more ground along the estuary.",
+        },
+        {
+          question: "Are dolphin tours safe for young children?",
+          answer:
+            "Many tours welcome children, and operators provide life jackets. Age recommendations and boat size vary, so check with the operator if you are traveling with very young kids.",
+        },
+        {
+          question: "When is the best time of day for dolphin tours?",
+          answer:
+            "Dolphins can appear at various times, and there is no single best hour. Morning trips often have calmer water; midday and afternoon trips are widely available year-round.",
+        },
+        {
+          question: "Can I take photos on a dolphin tour?",
+          answer:
+            "Yes — photography is encouraged. Bring a camera or phone with a strap, and be ready for quick movements. Dolphins may surface briefly and unpredictably.",
+        },
+        {
+          question: "What should I bring on a dolphin tour?",
+          answer:
+            "Sunscreen, sunglasses, a hat, and a light layer for breeze are common essentials. Some travelers bring binoculars. Check whether the operator allows food or drinks on board.",
+        },
+      ]}
+    />
+  );
+}

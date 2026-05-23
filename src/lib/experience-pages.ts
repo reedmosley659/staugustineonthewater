@@ -1,4 +1,4 @@
-import { canonicalExperienceRoutes, experienceRoutes } from "@/lib/routes";
+import { experienceRoutes } from "@/lib/routes";
 
 export type RelatedExperiencePage = {
   href: string;
@@ -33,14 +33,6 @@ export const experiencePages: RelatedExperiencePage[] = [
   },
 ];
 
-const canonicalToSeoRoute: Record<string, string> = {
-  [canonicalExperienceRoutes.boatRentals]: experienceRoutes.boatRentals,
-  [canonicalExperienceRoutes.sunsetCruises]: experienceRoutes.sunsetCruises,
-  [canonicalExperienceRoutes.dolphinTours]: experienceRoutes.dolphinTours,
-  [canonicalExperienceRoutes.nightsOfLights]: experienceRoutes.nightsOfLights,
-};
-
 export function getRelatedPages(currentPath: string): RelatedExperiencePage[] {
-  const seoPath = canonicalToSeoRoute[currentPath] ?? currentPath;
-  return experiencePages.filter((page) => page.href !== seoPath);
+  return experiencePages.filter((page) => page.href !== currentPath);
 }
