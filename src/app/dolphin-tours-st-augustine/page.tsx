@@ -1,5 +1,6 @@
 import { ExperienceLandingPage } from "@/components/ExperienceLandingPage";
 import { createPageMetadata } from "@/lib/metadata";
+import { dolphinTourOperators } from "@/lib/dolphin-tour-operators";
 
 export const metadata = createPageMetadata({
   title: "St Augustine Dolphin Tours",
@@ -14,6 +15,10 @@ export default function StAugustineDolphinToursPage() {
       path="/dolphin-tours-st-augustine"
       eyebrow="St. Augustine, Florida"
       title="St Augustine Dolphin Tours"
+      operators={dolphinTourOperators}
+      operatorPage="dolphin_tours_st_augustine"
+      operatorSectionTitle="Top Dolphin Tour Options in St Augustine"
+      operatorSectionSubtitle="Three options across different price points and group sizes — compare what works for your group, then check availability."
       heroImage={{
         src: "/hero/Dolphin-cruise.jpg",
         alt: "St Augustine dolphin tour on the water",

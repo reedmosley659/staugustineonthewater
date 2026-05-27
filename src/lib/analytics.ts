@@ -1,8 +1,14 @@
+export type ExperiencePage =
+  | "boat_rentals_st_augustine"
+  | "sunset_cruises_st_augustine"
+  | "dolphin_tours_st_augustine"
+  | "nights_of_lights_boat_tours";
+
 export type BoatOperatorClickParams = {
   option_position: 1 | 2 | 3;
   option_label: string;
   destination_url: string;
-  page: "boat_rentals_st_augustine";
+  page: ExperiencePage;
 };
 
 export function trackBoatOperatorClick(params: BoatOperatorClickParams): void {
@@ -16,7 +22,7 @@ export function trackBoatOperatorClick(params: BoatOperatorClickParams): void {
     ).gtag;
 
     if (typeof gtag === "function") {
-      gtag("event", "boat_operator_click", params);
+      gtag("event", "operator_click", params);
     }
   } catch {
     // Fail silently when analytics is unavailable.

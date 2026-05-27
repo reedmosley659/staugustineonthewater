@@ -1,5 +1,6 @@
 import { ExperienceLandingPage } from "@/components/ExperienceLandingPage";
 import { createPageMetadata } from "@/lib/metadata";
+import { nightsOfLightsOperators } from "@/lib/nights-of-lights-operators";
 
 export const metadata = createPageMetadata({
   title: "St Augustine Nights of Lights Boat Tours",
@@ -14,6 +15,10 @@ export default function StAugustineNightsOfLightsBoatToursPage() {
       path="/nights-of-lights-boat-tours"
       eyebrow="St. Augustine, Florida"
       title="St Augustine Nights of Lights Boat Tours"
+      operators={nightsOfLightsOperators}
+      operatorPage="nights_of_lights_boat_tours"
+      operatorSectionTitle="Top Nights of Lights Cruise Options"
+      operatorSectionSubtitle="Three options for the holiday season — compare what fits your group, and book early for peak nights."
       heroImage={{
         src: "/hero/tiki-boat.jpg",
         alt: "St Augustine Nights of Lights boat tour on the water",

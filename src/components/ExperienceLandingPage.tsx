@@ -1,7 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import { OperatorCards } from "@/components/OperatorCards";
+import type { ExperiencePage } from "@/lib/analytics";
 import { getRelatedPages } from "@/lib/experience-pages";
+import type { ExperienceOperator } from "@/lib/operator-types";
 import { affiliateDisclosure, getSiteUrl, siteName } from "@/lib/site";
 import { Footer } from "./Footer";
 
@@ -28,6 +31,11 @@ export type ExperienceLandingPageProps = {
   whatToExpect: ExperienceSection[];
   howToChoose: ExperienceSection[];
   faqs: ExperienceFaq[];
+  /** Operator comparison cards. When provided, operatorPage and operatorSectionTitle are required. */
+  operators?: ExperienceOperator[];
+  operatorPage?: ExperiencePage;
+  operatorSectionTitle?: string;
+  operatorSectionSubtitle?: string;
 };
 
 export function ExperienceLandingPage({
@@ -40,9 +48,30 @@ export function ExperienceLandingPage({
   whatToExpect,
   howToChoose,
   faqs,
+  operators,
+  operatorPage,
+  operatorSectionTitle,
+  operatorSectionSubtitle,
 }: ExperienceLandingPageProps) {
   const relatedPages = getRelatedPages(path);
   const pageUrl = new URL(path, getSiteUrl()).toString();
+  const hasOperators = !!(operators && operatorPage);
+
+  // Inserting operator cards (sand bg) between intro (white) and the content
+  // sections shifts the alternating background pattern by one step.
+  const bg = hasOperators
+    ? {
+        bestFor: "white" as const,
+        whatToExpect: "sand" as const,
+        howToChoose: "white" as const,
+        faq: "sand" as const,
+      }
+    : {
+        bestFor: "sand" as const,
+        whatToExpect: "white" as const,
+        howToChoose: "sand" as const,
+        faq: "white" as const,
+      };
 
   const structuredData = {
     "@context": "https://schema.org",
@@ -124,6 +153,22 @@ export function ExperienceLandingPage({
             <h1 className="font-display text-4xl font-semibold leading-[1.1] text-white sm:text-5xl lg:text-6xl">
               {title}
             </h1>
+            {hasOperators && (
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <a
+                  href="#top-options"
+                  className="inline-flex min-h-[3rem] items-center justify-center rounded-sm bg-gold px-8 py-4 text-sm font-semibold uppercase tracking-wide text-navy shadow-lg shadow-navy/20 transition-all hover:bg-gold-light"
+                >
+                  View Top Options
+                </a>
+                <Link
+                  href="/#experiences"
+                  className="inline-flex min-h-[3rem] items-center justify-center rounded-sm border border-white/40 bg-white/10 px-8 py-4 text-sm font-semibold uppercase tracking-wide text-white backdrop-blur-sm transition-all hover:bg-white/20"
+                >
+                  Compare All Experiences
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -136,28 +181,39 @@ export function ExperienceLandingPage({
         </div>
       </section>
 
+      {hasOperators && (
+        <OperatorCards
+          operators={operators!}
+          page={operatorPage!}
+          title={operatorSectionTitle ?? title}
+          subtitle={operatorSectionSubtitle}
+        />
+      )}
+
       <ExperienceSectionBlock
         eyebrow="Best For"
         title="Who This Experience Is Best For"
         items={bestFor}
-        background="sand"
+        background={bg.bestFor}
       />
 
       <ExperienceSectionBlock
         eyebrow="What to Expect"
         title="What to Expect on the Water"
         items={whatToExpect}
-        background="white"
+        background={bg.whatToExpect}
       />
 
       <ExperienceSectionBlock
         eyebrow="How to Choose"
         title="How to Choose the Right Option"
         items={howToChoose}
-        background="sand"
+        background={bg.howToChoose}
       />
 
-      <section className="bg-white py-16 lg:py-24">
+      <section
+        className={`${bg.faq === "sand" ? "bg-sand" : "bg-white"} py-16 lg:py-24`}
+      >
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
             FAQ
@@ -169,7 +225,9 @@ export function ExperienceLandingPage({
             {faqs.map((faq) => (
               <div
                 key={faq.question}
-                className="rounded-sm border border-sand-dark/80 bg-sand/40 p-6"
+                className={`rounded-sm border border-sand-dark/80 p-6 ${
+                  bg.faq === "sand" ? "bg-white" : "bg-sand/40"
+                }`}
               >
                 <dt className="font-display text-lg font-semibold text-navy">
                   {faq.question}
@@ -186,17 +244,20 @@ export function ExperienceLandingPage({
       <section className="bg-navy py-16 lg:py-24">
         <div className="mx-auto max-w-2xl px-6 text-center lg:px-8">
           <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">
-            Compare St. Augustine Water Experiences
+            {hasOperators
+              ? "Ready to Book?"
+              : "Compare St. Augustine Water Experiences"}
           </h2>
           <p className="mt-4 text-base leading-relaxed text-white/80">
-            View options for families, couples, and groups — or browse related
-            guides below to plan a better day on the water.
+            {hasOperators
+              ? "View pricing and availability from the options above, or browse other St. Augustine water experiences below."
+              : "View options for families, couples, and groups — or browse related guides below to plan a better day on the water."}
           </p>
           <Link
-            href="/#experiences"
+            href={hasOperators ? "#top-options" : "/#experiences"}
             className="mt-8 inline-flex min-h-[3rem] items-center justify-center rounded-sm bg-gold px-10 py-4 text-sm font-semibold uppercase tracking-wide text-navy shadow-lg shadow-navy/20 transition-all hover:bg-gold-light"
           >
-            Compare Water Experiences
+            {hasOperators ? "View Top Options" : "Compare Water Experiences"}
           </Link>
         </div>
       </section>

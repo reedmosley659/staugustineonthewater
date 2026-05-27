@@ -1,5 +1,6 @@
 import { ExperienceLandingPage } from "@/components/ExperienceLandingPage";
 import { createPageMetadata } from "@/lib/metadata";
+import { sunsetCruiseOperators } from "@/lib/sunset-cruise-operators";
 
 export const metadata = createPageMetadata({
   title: "St Augustine Sunset Cruises",
@@ -14,6 +15,10 @@ export default function StAugustineSunsetCruisesPage() {
       path="/sunset-cruises-st-augustine"
       eyebrow="St. Augustine, Florida"
       title="St Augustine Sunset Cruises"
+      operators={sunsetCruiseOperators}
+      operatorPage="sunset_cruises_st_augustine"
+      operatorSectionTitle="Top Sunset Cruise Options in St Augustine"
+      operatorSectionSubtitle="Three options for different group styles — compare what fits your evening, then check availability on the operator's site."
       heroImage={{
         src: "/hero/sunset-cruise.jpg",
         alt: "St Augustine sunset cruise near historic waterfront",
