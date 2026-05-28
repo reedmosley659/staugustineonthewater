@@ -11,13 +11,17 @@ export function MobileStickyCTA({
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    let pastHero = false;
-    let reachedOperators = false;
+    let pastIntro = false;
+    let operatorsInView = false;
+    let nearBottom = false;
 
-    const sync = () => setShow(pastHero && !reachedOperators);
+    const sync = () => setShow(pastIntro && !operatorsInView && !nearBottom);
 
     const onScroll = () => {
-      pastHero = window.scrollY > 300;
+      pastIntro = window.scrollY > 300;
+      nearBottom =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 80;
       sync();
     };
 
@@ -27,18 +31,17 @@ export function MobileStickyCTA({
     if (section) {
       observer = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) {
-            reachedOperators = true;
-            observer?.disconnect();
-          }
+          operatorsInView = entry.isIntersecting;
           sync();
         },
-        { threshold: 0.1 }
+        { threshold: 0 }
       );
       observer.observe(section);
     }
 
     window.addEventListener("scroll", onScroll, { passive: true });
+    // Sync on mount in case the page is already scrolled (e.g. anchor navigation)
+    onScroll();
 
     return () => {
       window.removeEventListener("scroll", onScroll);
