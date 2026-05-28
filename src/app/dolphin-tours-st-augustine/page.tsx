@@ -1,11 +1,12 @@
+import Link from "next/link";
 import { ExperienceLandingPage } from "@/components/ExperienceLandingPage";
 import { createPageMetadata } from "@/lib/metadata";
 import { dolphinTourOperators } from "@/lib/dolphin-tour-operators";
 
 export const metadata = createPageMetadata({
-  title: "St Augustine Dolphin Tours",
+  title: "St Augustine Dolphin Tours | Compare Tours & Book Direct",
   description:
-    "Plan St Augustine dolphin tours with a practical guide to what you will see, how trips work, and how to choose a dolphin-watching cruise in the area.",
+    "Compare St Augustine dolphin tours for families, wildlife enthusiasts, and first-time visitors. Find the right guided cruise and check pricing and availability.",
   path: "/dolphin-tours-st-augustine",
 });
 
@@ -40,9 +41,23 @@ export default function StAugustineDolphinToursPage() {
             Augustine&apos;s history, ecology, and waterfront landmarks.
           </p>
           <p>
-            This guide explains what St Augustine dolphin tours usually involve,
-            who they work best for, and how to compare options before booking
-            listings are available here.
+            This guide covers what St Augustine dolphin tours typically involve,
+            who they work best for, and how they compare to other on-the-water
+            options like a{" "}
+            <Link
+              href="/boat-rentals-st-augustine"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              private boat rental
+            </Link>{" "}
+            or a{" "}
+            <Link
+              href="/sunset-cruises-st-augustine"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              St Augustine sunset cruise
+            </Link>
+            .
           </p>
         </>
       }

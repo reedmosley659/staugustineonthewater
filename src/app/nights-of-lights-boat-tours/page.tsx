@@ -1,11 +1,12 @@
+import Link from "next/link";
 import { ExperienceLandingPage } from "@/components/ExperienceLandingPage";
 import { createPageMetadata } from "@/lib/metadata";
 import { nightsOfLightsOperators } from "@/lib/nights-of-lights-operators";
 
 export const metadata = createPageMetadata({
-  title: "St Augustine Nights of Lights Boat Tours",
+  title: "St Augustine Nights of Lights Boat Tours | Compare Holiday Cruises",
   description:
-    "Guide to St Augustine Nights of Lights boat tours — when the event runs, what to expect on the water, and how to choose a holiday lights cruise.",
+    "Compare St Augustine Nights of Lights boat tours for the holiday season. Find cruises for families, couples, and groups — book early for peak nights.",
   path: "/nights-of-lights-boat-tours",
 });
 
@@ -42,7 +43,22 @@ export default function StAugustineNightsOfLightsBoatToursPage() {
           <p>
             This guide covers what to expect on St Augustine Nights of Lights
             boat tours, who they suit best, and how to plan ahead for the
-            busiest weeks of the season.
+            busiest weeks of the season. For year-round water experiences in St.
+            Augustine, see our guides to{" "}
+            <Link
+              href="/sunset-cruises-st-augustine"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              sunset cruises
+            </Link>{" "}
+            and{" "}
+            <Link
+              href="/boat-rentals-st-augustine"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              boat rentals
+            </Link>
+            .
           </p>
         </>
       }

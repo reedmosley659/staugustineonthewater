@@ -198,6 +198,21 @@ export function BoatRentalsMoneyPage() {
             <p>
               Use the recommendations below to narrow your options, then check
               availability directly with the operator that matches your group.
+              Looking for a guided experience instead? Compare{" "}
+              <Link
+                href="/sunset-cruises-st-augustine"
+                className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+              >
+                St Augustine sunset cruises
+              </Link>{" "}
+              or{" "}
+              <Link
+                href="/dolphin-tours-st-augustine"
+                className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+              >
+                dolphin tours
+              </Link>
+              .
             </p>
           </div>
         </div>
@@ -367,6 +382,24 @@ export function BoatRentalsMoneyPage() {
               </div>
             ))}
           </dl>
+        </div>
+      </section>
+
+      <section className="bg-navy py-16 lg:py-20">
+        <div className="mx-auto max-w-2xl px-6 text-center lg:px-8">
+          <h2 className="font-display text-3xl font-semibold text-white sm:text-4xl">
+            Ready to Check Availability?
+          </h2>
+          <p className="mt-4 text-base leading-relaxed text-white/80">
+            Browse the St Augustine boat rental options above and check
+            availability directly with each operator.
+          </p>
+          <a
+            href="#top-boat-rentals"
+            className="mt-8 inline-flex min-h-[3rem] items-center justify-center rounded-sm bg-gold px-10 py-4 text-sm font-semibold uppercase tracking-wide text-navy shadow-lg shadow-navy/20 transition-all hover:bg-gold-light"
+          >
+            Check Availability
+          </a>
         </div>
       </section>
 

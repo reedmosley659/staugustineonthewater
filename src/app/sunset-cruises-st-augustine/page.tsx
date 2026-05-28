@@ -1,11 +1,12 @@
+import Link from "next/link";
 import { ExperienceLandingPage } from "@/components/ExperienceLandingPage";
 import { createPageMetadata } from "@/lib/metadata";
 import { sunsetCruiseOperators } from "@/lib/sunset-cruise-operators";
 
 export const metadata = createPageMetadata({
-  title: "St Augustine Sunset Cruises",
+  title: "St Augustine Sunset Cruises | Compare Options & Check Availability",
   description:
-    "Discover St Augustine sunset cruises along the Matanzas River and Atlantic coast. Learn what to expect, best times to go, and how to choose the right cruise.",
+    "Compare St Augustine sunset cruises — sailboats, tiki boats, and private charters. Find the right cruise for couples, families, or groups and check availability.",
   path: "/sunset-cruises-st-augustine",
 });
 
@@ -41,7 +42,15 @@ export default function StAugustineSunsetCruisesPage() {
           <p>
             Use this guide to understand what St Augustine sunset cruises
             typically include, who they suit best, and what to consider before
-            you book.
+            you book. Travelers who prefer a fully private, schedule-flexible
+            experience can also compare{" "}
+            <Link
+              href="/boat-rentals-st-augustine"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              St Augustine boat rentals
+            </Link>{" "}
+            as an alternative.
           </p>
         </>
       }

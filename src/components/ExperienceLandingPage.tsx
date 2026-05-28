@@ -257,7 +257,7 @@ export function ExperienceLandingPage({
             href={hasOperators ? "#top-options" : "/#experiences"}
             className="mt-8 inline-flex min-h-[3rem] items-center justify-center rounded-sm bg-gold px-10 py-4 text-sm font-semibold uppercase tracking-wide text-navy shadow-lg shadow-navy/20 transition-all hover:bg-gold-light"
           >
-            {hasOperators ? "View Top Options" : "Compare Water Experiences"}
+            {hasOperators ? "Check Availability" : "Compare Water Experiences"}
           </Link>
         </div>
       </section>
