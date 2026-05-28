@@ -6,6 +6,7 @@ import { getRelatedPages } from "@/lib/experience-pages";
 import { experienceRoutes } from "@/lib/routes";
 import { affiliateDisclosure, getSiteUrl, siteName } from "@/lib/site";
 import { Footer } from "./Footer";
+import { MobileStickyCTA } from "./MobileStickyCTA";
 
 const pagePath = experienceRoutes.boatRentals;
 
@@ -114,6 +115,8 @@ export function BoatRentalsMoneyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+
+      <MobileStickyCTA operatorSectionId="top-boat-rentals" />
 
       <header className="border-b border-sand-dark bg-white">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 lg:px-8">

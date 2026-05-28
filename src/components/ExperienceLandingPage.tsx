@@ -7,6 +7,7 @@ import { getRelatedPages } from "@/lib/experience-pages";
 import type { ExperienceOperator } from "@/lib/operator-types";
 import { affiliateDisclosure, getSiteUrl, siteName } from "@/lib/site";
 import { Footer } from "./Footer";
+import { MobileStickyCTA } from "./MobileStickyCTA";
 
 export type ExperienceSection = {
   title: string;
@@ -180,6 +181,8 @@ export function ExperienceLandingPage({
           </div>
         </div>
       </section>
+
+      {hasOperators && <MobileStickyCTA operatorSectionId="top-options" />}
 
       {hasOperators && (
         <OperatorCards
