@@ -28,10 +28,10 @@ export const boatRentalOperators: BoatRentalOperator[] = [
     bestFor:
       "Families, groups, birthdays, bachelor/bachelorette parties, and first-time visitors who want the most flexible private boating experience.",
     highlights: [
-      "Private or semi-private boat day",
-      "Good for mixed groups",
-      "Flexible sightseeing and relaxing",
-      "Strong general-purpose option",
+      "Private or semi-private — your group has the boat, not shared with strangers",
+      "Flexible routing on the Matanzas River and Intracoastal access points",
+      "Works well for birthday groups, families, or anyone who wants control over the day",
+      "Good range of group sizes and outing types",
     ],
     bookingUrl: "https://gone2seaboatrentals.com/",
   },
@@ -44,10 +44,10 @@ export const boatRentalOperators: BoatRentalOperator[] = [
     bestFor:
       "Laid-back groups, sightseeing, easy cruising, families with kids, and visitors who want a relaxed boat day without a luxury-charter feel.",
     highlights: [
-      "Casual and approachable",
-      "Relaxed sightseeing",
-      "Easy group outing",
-      "Good fit for daytime cruising",
+      "Pontoon-style vessel — stable, open deck, practical for families",
+      "Lower-key outing with less pressure to fill an itinerary",
+      "Good for anyone who wants to be on the water without a structured guided experience",
+      "Day-rate format that works well for flexible departure timing",
     ],
     bookingUrl: "https://www.jaxboatrentals.com/pontoon-boat-rentals",
   },
@@ -60,10 +60,10 @@ export const boatRentalOperators: BoatRentalOperator[] = [
     bestFor:
       "Couples, celebrations, anniversaries, private events, upscale groups, and travelers who want a more polished experience.",
     highlights: [
-      "Premium, private feel",
-      "Special occasion fit",
-      "Strong for romantic or celebration trips",
-      "Custom experiences including sunset outings",
+      "Private charter with a captain — good for when you want to relax, not operate the boat",
+      "Suited for celebrations or anniversaries where the experience matters more than just being on the water",
+      "More flexibility for custom routes and timing than standard rental operators",
+      "Worth the premium if you're planning around a specific occasion",
     ],
     bookingUrl: "https://thcharters.com/",
     linkNote: "Books or inquires through operator website",

@@ -1,25 +1,23 @@
-import { affiliateDisclosure } from "@/lib/site";
-
 const reasons = [
   {
-    title: "Curated Water Experiences",
+    title: "Six years in boat rentals",
     description:
-      "Compare boat rentals, cruises, tours, and seasonal experiences in one focused St. Augustine guide.",
+      "I've worked in the boat rental industry for six years, the last three running day-to-day on-water operations. I know how these businesses run, what separates a well-run operator from one that feels generic once you're actually out on the water, and what customers actually care about.",
   },
   {
-    title: "Built for Visitors",
+    title: "What I actually look for",
     description:
-      "Quickly narrow down the right experience for families, couples, groups, celebrations, or relaxing days on the water.",
+      "I'm not reviewing booking websites. I look at things like vessel type and group fit, how operators handle logistics, what kind of captain experience you're actually getting, and whether the pricing reflects the actual experience. Those are usually the things people remember most afterward — for better or worse.",
   },
   {
-    title: "Transparent Recommendations",
+    title: "Where I've been, where I haven't",
     description:
-      "Some featured experiences may earn us a commission at no extra cost to you. We focus on useful recommendations, not clutter.",
+      "I've personally experienced some of the operators featured here. Where I have firsthand experience, I say so. Where I don't, I'm clear about what the research and reviews show — I don't pretend otherwise.",
   },
   {
-    title: "Updated for Seasonal Demand",
+    title: "How this works",
     description:
-      "From summer boat days to Nights of Lights cruises, the guide can grow with seasonal St. Augustine travel demand.",
+      "Some links earn a small commission at no extra cost to you. I care more about whether I'd confidently recommend an experience than whether there's an affiliate relationship.",
   },
 ];
 
@@ -30,15 +28,16 @@ export function WhyBookWithUs() {
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
-              Trust
+              About This Guide
             </p>
             <h2 className="font-display mt-3 text-3xl font-semibold text-navy sm:text-4xl">
-              Why Use St Augustine On The Water?
+              Why I Built This
             </h2>
             <p className="mt-4 max-w-md text-base leading-relaxed text-navy/70">
-              A locally focused St. Augustine water experience guide — built to
-              help you compare options in one place and plan a better day on the
-              water.
+              I built this because I know the boat rental industry from the
+              inside, and I&apos;ve never found a straightforward resource for
+              planning a day on the water in St. Augustine that isn&apos;t just
+              repackaged review site results.
             </p>
           </div>
 
@@ -57,10 +56,6 @@ export function WhyBookWithUs() {
             ))}
           </ul>
         </div>
-
-        <p className="mx-auto mt-16 max-w-2xl text-center text-xs leading-relaxed text-navy/55">
-          {affiliateDisclosure}
-        </p>
       </div>
     </section>
   );
