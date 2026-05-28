@@ -3,8 +3,8 @@ import Link from "next/link";
 const navLinks = [
   { href: "#experiences", label: "Experiences" },
   { href: "#why-us", label: "Why Us" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "/boat-rentals-st-augustine", label: "Boat Rentals" },
+  { href: "/sunset-cruises-st-augustine", label: "Sunset Cruises" },
 ];
 
 export function Header() {
@@ -22,13 +22,13 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 md:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-white/80 transition-colors hover:text-white"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -39,13 +39,13 @@ export function Header() {
           </summary>
           <nav className="absolute right-0 top-full mt-2 min-w-[10rem] rounded-sm border border-white/20 bg-navy/95 p-2 shadow-xl backdrop-blur-md">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="block rounded-sm px-4 py-2.5 text-sm font-medium text-white/90 transition-colors hover:bg-white/10"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
         </details>
