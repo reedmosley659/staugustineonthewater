@@ -67,7 +67,7 @@ const faqs = [
   {
     question: "Can I book a sunset boat rental in St Augustine?",
     answer:
-      "Many operators offer late-afternoon and sunset departures, especially on private charters. Sunset timing shifts with the season, so confirm exact departure and return times for your date. For dedicated sunset cruises with narration, compare our sunset cruise guide as well.",
+      "Many operators offer late-afternoon and sunset departures, especially on private charters. Sunset timing shifts with the season, so confirm exact departure and return times for your date. For dedicated sunset cruises with narration, compare the sunset cruise guide as well.",
   },
 ] as const;
 
@@ -408,7 +408,7 @@ export function BoatRentalsMoneyPage() {
 
       <div className="border-t border-sand-dark bg-sand px-6 py-8 lg:px-8">
         <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-navy/55">
-          {affiliateDisclosure} We do not operate boats or tours directly.
+          {affiliateDisclosure} I do not operate boats or tours directly.
         </p>
       </div>
 

@@ -10,7 +10,7 @@ export function Contact() {
         </h2>
         <p className="mt-4 text-base leading-relaxed text-navy/70">
           Questions about featured experiences or planning your time on the
-          water? We&apos;d love to hear from you.
+          water? I&apos;d love to hear from you.
         </p>
         <a
           href="mailto:hello@staugustineonthewater.com"

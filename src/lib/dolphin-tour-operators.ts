@@ -11,7 +11,7 @@ export const dolphinTourOperators: ExperienceOperator[] = [
     trackingLabel: "best_dolphin_florida_water_tours",
     label: "Best Overall Dolphin Tour",
     summary:
-      "Best overall wildlife/dolphin experience with excellent reputation and strong booking UX.",
+      "Well-regarded dolphin and wildlife tour with a consistent local reputation and easy online booking.",
     bestFor: "Families, wildlife lovers, first-time visitors",
     duration: "~90 minutes",
     groupSize: "Varies by vessel",

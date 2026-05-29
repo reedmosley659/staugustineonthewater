@@ -12,13 +12,12 @@ export function About() {
         <p className="mt-6 text-base leading-relaxed text-white/80 sm:text-lg">
           St Augustine On The Water helps visitors compare and discover
           water-based experiences in St. Augustine, including boat rentals,
-          sunset cruises, dolphin tours, fishing charters, and seasonal cruises.
+          sunset cruises, dolphin tours, and seasonal holiday cruises.
         </p>
         <p className="mt-4 text-base leading-relaxed text-white/70">
-          Whether you are planning a romantic evening on the water, a family
-          adventure, or a seasonal holiday cruise, we highlight featured
-          experiences and local recommendations to help you plan your time on
-          the water.
+          Whether you&apos;re planning a romantic evening on the water, a
+          family adventure, or a seasonal holiday cruise, this guide features
+          curated recommendations to help you plan your time on the water.
         </p>
       </div>
     </section>

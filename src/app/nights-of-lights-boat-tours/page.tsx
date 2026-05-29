@@ -44,7 +44,7 @@ export default function StAugustineNightsOfLightsBoatToursPage() {
             This guide covers what to expect on St Augustine Nights of Lights
             boat tours, who they suit best, and how to plan ahead for the
             busiest weeks of the season. For year-round water experiences in St.
-            Augustine, see our guides to{" "}
+            Augustine, the guides to{" "}
             <Link
               href="/sunset-cruises-st-augustine"
               className="text-teal underline underline-offset-2 transition-colors hover:text-navy"

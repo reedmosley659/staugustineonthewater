@@ -11,7 +11,7 @@ export const sunsetCruiseOperators: ExperienceOperator[] = [
     trackingLabel: "best_sunset_florida_water_tours",
     label: "Best Overall Sunset Cruise",
     summary:
-      "Strong overall sunset option with excellent reviews, polished booking UX, and multiple sunset-focused experiences.",
+      "Well-reviewed overall sunset option with multiple cruise styles and easy online booking.",
     bestFor: "Couples, families, visitors wanting a polished guided experience",
     duration: "~90 minutes",
     groupSize: "Varies by vessel",

@@ -306,7 +306,7 @@ export function ExperienceLandingPage({
 
       <div className="border-t border-sand-dark bg-sand px-6 py-8 lg:px-8">
         <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-navy/55">
-          {affiliateDisclosure} We do not operate boats or tours directly.
+          {affiliateDisclosure} I do not operate boats or tours directly.
         </p>
       </div>
 

@@ -11,7 +11,7 @@ export const nightsOfLightsOperators: ExperienceOperator[] = [
     trackingLabel: "best_nights_of_lights_florida_water_tours",
     label: "Best Overall Nights of Lights Cruise",
     summary:
-      "Best overall combination of review quality, booking UX, and Nights of Lights product fit.",
+      "Consistently well-reviewed operator with a dedicated Nights of Lights cruise and easy online booking.",
     bestFor: "Families, couples, general visitors",
     duration: "~90 minutes",
     groupSize: "Up to 8 on some offerings",
