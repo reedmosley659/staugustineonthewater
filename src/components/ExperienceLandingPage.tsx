@@ -118,6 +118,20 @@ export function ExperienceLandingPage({
           },
         })),
       },
+      ...(hasOperators
+        ? [
+            {
+              "@type": "ItemList",
+              name: operatorSectionTitle ?? title,
+              itemListElement: operators!.map((op) => ({
+                "@type": "ListItem",
+                position: op.position,
+                name: op.label,
+                url: op.bookingUrl,
+              })),
+            },
+          ]
+        : []),
     ],
   };
 

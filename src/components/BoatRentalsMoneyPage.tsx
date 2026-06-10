@@ -145,6 +145,16 @@ export function BoatRentalsMoneyPage() {
           },
         })),
       },
+      {
+        "@type": "ItemList",
+        name: "Top Boat Rental Options in St Augustine",
+        itemListElement: boatRentalOperators.map((op) => ({
+          "@type": "ListItem",
+          position: op.position,
+          name: op.label,
+          url: op.bookingUrl,
+        })),
+      },
     ],
   };
 
