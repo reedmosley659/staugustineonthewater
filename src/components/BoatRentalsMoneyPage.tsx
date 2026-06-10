@@ -276,6 +276,16 @@ export function BoatRentalsMoneyPage() {
               </Link>{" "}
               for the holiday season.
             </p>
+            <p>
+              Wondering about pricing before you decide?{" "}
+              <Link
+                href="/blog/boat-rental-cost-st-augustine"
+                className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+              >
+                See our St. Augustine boat rental cost guide
+              </Link>{" "}
+              for a breakdown of typical rates by experience type.
+            </p>
           </div>
         </div>
 

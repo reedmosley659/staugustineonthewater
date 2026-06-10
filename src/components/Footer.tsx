@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { experienceRoutes } from "@/lib/routes";
+import { blogRoutes, experienceRoutes } from "@/lib/routes";
 import { affiliateDisclosure } from "@/lib/site";
 
 const experienceLinks = [
@@ -47,6 +47,12 @@ export function Footer() {
           </nav>
 
           <nav className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 lg:justify-end">
+            <Link
+              href={blogRoutes.index}
+              className="text-sm text-navy/70 transition-colors hover:text-teal"
+            >
+              Guides
+            </Link>
             <Link
               href="/privacy-policy"
               className="text-sm text-navy/70 transition-colors hover:text-teal"

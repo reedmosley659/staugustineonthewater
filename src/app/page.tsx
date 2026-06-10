@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { FeaturedCategories } from "@/components/FeaturedCategories";
 import { WhyBookWithUs } from "@/components/WhyBookWithUs";
 import { About } from "@/components/About";
+import { HomepageGuides } from "@/components/HomepageGuides";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { createPageMetadata } from "@/lib/metadata";
@@ -20,6 +21,7 @@ export default function Home() {
       <FeaturedCategories />
       <WhyBookWithUs />
       <About />
+      <HomepageGuides />
       <Contact />
       <Footer />
     </>

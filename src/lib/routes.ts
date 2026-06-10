@@ -6,6 +6,12 @@ export const experienceRoutes = {
   nightsOfLights: "/nights-of-lights-boat-tours",
 } as const;
 
+/** Blog / guide routes. */
+export const blogRoutes = {
+  index: "/blog",
+  boatRentalCost: "/blog/boat-rental-cost-st-augustine",
+} as const;
+
 /** Legacy paths — permanently redirected to experienceRoutes in next.config.ts. */
 export const legacyExperienceRoutes = {
   boatRentals: "/st-augustine-boat-rentals",

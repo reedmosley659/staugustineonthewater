@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { experienceRoutes } from "@/lib/routes";
+import { blogRoutes, experienceRoutes } from "@/lib/routes";
 import { getSiteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -20,6 +20,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.8,
     })),
+    {
+      url: `${baseUrl}${blogRoutes.index}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}${blogRoutes.boatRentalCost}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: new Date(),
