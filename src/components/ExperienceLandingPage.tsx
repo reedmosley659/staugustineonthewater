@@ -5,7 +5,7 @@ import { OperatorCards } from "@/components/OperatorCards";
 import type { ExperiencePage } from "@/lib/analytics";
 import { getRelatedPages } from "@/lib/experience-pages";
 import type { ExperienceOperator } from "@/lib/operator-types";
-import { affiliateDisclosure, getSiteUrl, siteName } from "@/lib/site";
+import { affiliateDisclosure, getSiteUrl, siteName, whyTrustUsText } from "@/lib/site";
 import { Footer } from "./Footer";
 import { MobileStickyCTA } from "./MobileStickyCTA";
 
@@ -27,9 +27,13 @@ export type ExperienceLandingPageProps = {
     src: string;
     alt: string;
   };
+  lastUpdated?: string;
   intro: ReactNode;
   bestFor: ExperienceSection[];
   whatToExpect: ExperienceSection[];
+  bestMonths?: ExperienceSection[];
+  bestMonthsTitle?: string;
+  bestMonthsEyebrow?: string;
   howToChoose: ExperienceSection[];
   faqs: ExperienceFaq[];
   /** Operator comparison cards. When provided, operatorPage and operatorSectionTitle are required. */
@@ -44,9 +48,13 @@ export function ExperienceLandingPage({
   eyebrow,
   title,
   heroImage,
+  lastUpdated,
   intro,
   bestFor,
   whatToExpect,
+  bestMonths,
+  bestMonthsTitle = "Best Months for This Experience",
+  bestMonthsEyebrow = "Best Time to Visit",
   howToChoose,
   faqs,
   operators,
@@ -57,21 +65,26 @@ export function ExperienceLandingPage({
   const relatedPages = getRelatedPages(path);
   const pageUrl = new URL(path, getSiteUrl()).toString();
   const hasOperators = !!(operators && operatorPage);
+  const hasBestMonths = !!(bestMonths && bestMonths.length > 0);
 
-  // Inserting operator cards (sand bg) between intro (white) and the content
-  // sections shifts the alternating background pattern by one step.
+  // Background alternation: each section flips white/sand.
+  // Inserting operator cards (sand bg) between intro (white) and content
+  // sections shifts the pattern by one step. Inserting bestMonths shifts
+  // it by one more — recalculate downstream colors accordingly.
   const bg = hasOperators
     ? {
         bestFor: "white" as const,
         whatToExpect: "sand" as const,
-        howToChoose: "white" as const,
-        faq: "sand" as const,
+        bestMonths: "white" as const,
+        howToChoose: hasBestMonths ? ("sand" as const) : ("white" as const),
+        faq: hasBestMonths ? ("white" as const) : ("sand" as const),
       }
     : {
         bestFor: "sand" as const,
         whatToExpect: "white" as const,
-        howToChoose: "sand" as const,
-        faq: "white" as const,
+        bestMonths: "sand" as const,
+        howToChoose: hasBestMonths ? ("white" as const) : ("sand" as const),
+        faq: hasBestMonths ? ("sand" as const) : ("white" as const),
       };
 
   const structuredData = {
@@ -176,6 +189,9 @@ export function ExperienceLandingPage({
 
       <section className="bg-white py-16 lg:py-24">
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          {lastUpdated && (
+            <p className="mb-6 text-xs text-navy/40">Last Updated: {lastUpdated}</p>
+          )}
           <div className="space-y-4 text-base leading-relaxed text-navy/75">
             {intro}
           </div>
@@ -207,6 +223,15 @@ export function ExperienceLandingPage({
         background={bg.whatToExpect}
       />
 
+      {hasBestMonths && (
+        <ExperienceSectionBlock
+          eyebrow={bestMonthsEyebrow}
+          title={bestMonthsTitle}
+          items={bestMonths!}
+          background={bg.bestMonths}
+        />
+      )}
+
       <ExperienceSectionBlock
         eyebrow="How to Choose"
         title="How to Choose the Right Option"
@@ -224,7 +249,19 @@ export function ExperienceLandingPage({
           <h2 className="font-display mt-3 text-3xl font-semibold text-navy sm:text-4xl">
             Frequently Asked Questions
           </h2>
-          <dl className="mt-10 space-y-6">
+          <div
+            className={`mt-6 rounded-sm border border-sand-dark/60 px-6 py-4 ${
+              bg.faq === "sand" ? "bg-white" : "bg-sand/30"
+            }`}
+          >
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+              How We Choose
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-navy/70">
+              {whyTrustUsText}
+            </p>
+          </div>
+          <dl className="mt-8 space-y-6">
             {faqs.map((faq) => (
               <div
                 key={faq.question}

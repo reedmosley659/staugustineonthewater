@@ -11,6 +11,9 @@ export const siteTitle =
 export const affiliateDisclosure =
   "Some featured experiences may earn me a commission at no extra cost to you. I only feature experiences I believe travelers will find useful.";
 
+export const whyTrustUsText =
+  "Experiences on this site are selected based on operator reputation, trip quality, and how well each option serves different traveler types — families, couples, first-timers, and celebration groups. I research available options and update recommendations when better fits emerge. Links may earn a commission at no extra cost to you, but recommendations prioritize traveler usefulness over commission rates.";
+
 export function getSiteUrl(): URL {
   if (process.env.NEXT_PUBLIC_SITE_URL) {
     return new URL(process.env.NEXT_PUBLIC_SITE_URL);

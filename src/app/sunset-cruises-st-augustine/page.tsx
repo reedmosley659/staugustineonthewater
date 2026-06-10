@@ -16,6 +16,7 @@ export default function StAugustineSunsetCruisesPage() {
       path="/sunset-cruises-st-augustine"
       eyebrow="St. Augustine, Florida"
       title="St Augustine Sunset Cruises"
+      lastUpdated="June 2026"
       operators={sunsetCruiseOperators}
       operatorPage="sunset_cruises_st_augustine"
       operatorSectionTitle="Top Sunset Cruise Options in St Augustine"
@@ -50,7 +51,21 @@ export default function StAugustineSunsetCruisesPage() {
             >
               St Augustine boat rentals
             </Link>{" "}
-            as an alternative.
+            as an alternative. For wildlife-focused outings, see{" "}
+            <Link
+              href="/dolphin-tours-st-augustine"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              dolphin tours
+            </Link>
+            . Visiting during the holiday season? Compare{" "}
+            <Link
+              href="/nights-of-lights-boat-tours"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              Nights of Lights boat tours
+            </Link>
+            .
           </p>
         </>
       }
@@ -63,7 +78,7 @@ export default function StAugustineSunsetCruisesPage() {
         {
           title: "First-time visitors",
           description:
-            "A sunset cruise gives newcomers a relaxed introduction to the city's skyline and waterways without a full-day commitment."
+            "A sunset cruise gives newcomers a relaxed introduction to the city's skyline and waterways without a full-day commitment.",
         },
         {
           title: "Photography enthusiasts",
@@ -118,6 +133,29 @@ export default function StAugustineSunsetCruisesPage() {
             "Spring break, summer weekends, and holiday weeks are the busiest. Shoulder seasons often mean smaller crowds and easier availability.",
         },
       ]}
+      bestMonths={[
+        {
+          title: "Spring — April & May",
+          description:
+            "Average highs of 77–83°F with sunset arriving around 8:00–8:20 PM. Pleasant evenings with a comfortable breeze — one of the best windows for sunset cruises. Crowds are moderate before the summer peak.",
+        },
+        {
+          title: "Summer — June through August",
+          description:
+            "The longest days of the year, with sunset at 8:05–8:30 PM. Average highs reach 88–91°F. Afternoon thunderstorms are common but typically clear by departure time. The warmest and busiest season.",
+        },
+        {
+          title: "Fall — September & October",
+          description:
+            "Average highs of 80–87°F with sunset from 6:45–7:30 PM. Heat and humidity ease while water stays warm — excellent conditions and often fewer crowds than summer.",
+        },
+        {
+          title: "Winter — November through March",
+          description:
+            "Average highs of 64–73°F with sunset arriving as early as 5:30 PM in December. Evenings are cooler and require layers. Less busy, and the November–January window overlaps with Nights of Lights season.",
+        },
+      ]}
+      bestMonthsTitle="Best Months for Sunset Cruises in St Augustine"
       howToChoose={[
         {
           title: "Pick your vessel style",
@@ -167,9 +205,9 @@ export default function StAugustineSunsetCruisesPage() {
             "Policies vary by operator. Some cruises welcome BYOB; others sell drinks on board or restrict outside beverages. Check the rules for your specific trip before you arrive.",
         },
         {
-          question: "Are sunset cruises good for children?",
+          question: "Are sunset cruises kid friendly?",
           answer:
-            "Many family-friendly sunset cruises welcome children, but trip length and atmosphere differ by vessel. Smaller sailboats may be better suited to older kids; larger sightseeing boats often accommodate all ages.",
+            "Yes, sunset cruises are generally kid friendly, but the experience varies by vessel and age. In my experience, families with younger children often enjoy private charters more — where kids can move around freely or get in the water — or dolphin cruises where there is active wildlife to watch. A shared sunset cruise is a better fit for older children and teens.",
         },
         {
           question: "What should I wear on a sunset cruise?",
@@ -185,6 +223,11 @@ export default function StAugustineSunsetCruisesPage() {
           question: "Do sunset cruises run year-round?",
           answer:
             "Yes, sunset cruises operate throughout the year in St. Augustine, though schedules and frequency may vary by season. Holiday weeks and summer tend to have the most daily departures.",
+        },
+        {
+          question: "Can I book a private sunset cruise for just my group?",
+          answer:
+            "Yes — private sunset charters are available through several operators in St. Augustine. A private option gives your group full control over atmosphere and timing. Compare St Augustine boat rentals if you want a fully flexible private experience without a fixed sunset-cruise format.",
         },
       ]}
     />

@@ -16,6 +16,7 @@ export default function StAugustineNightsOfLightsBoatToursPage() {
       path="/nights-of-lights-boat-tours"
       eyebrow="St. Augustine, Florida"
       title="St Augustine Nights of Lights Boat Tours"
+      lastUpdated="June 2026"
       operators={nightsOfLightsOperators}
       operatorPage="nights_of_lights_boat_tours"
       operatorSectionTitle="Top Nights of Lights Cruise Options"
@@ -43,22 +44,30 @@ export default function StAugustineNightsOfLightsBoatToursPage() {
           <p>
             This guide covers what to expect on St Augustine Nights of Lights
             boat tours, who they suit best, and how to plan ahead for the
-            busiest weeks of the season. For year-round water experiences in St.
-            Augustine, the guides to{" "}
+            busiest weeks of the season. For year-round evening experiences,
+            compare{" "}
             <Link
               href="/sunset-cruises-st-augustine"
               className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
             >
               sunset cruises
+            </Link>
+            . For daytime wildlife outings,{" "}
+            <Link
+              href="/dolphin-tours-st-augustine"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              dolphin tours
             </Link>{" "}
-            and{" "}
+            run throughout the holiday season as well. Want full flexibility on
+            the water?{" "}
             <Link
               href="/boat-rentals-st-augustine"
               className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
             >
-              boat rentals
-            </Link>
-            .
+              Boat rentals
+            </Link>{" "}
+            are available for private outings.
           </p>
         </>
       }
@@ -193,6 +202,16 @@ export default function StAugustineNightsOfLightsBoatToursPage() {
           question: "Do Nights of Lights boat tours include food or drinks?",
           answer:
             "It depends on the operator. Some cruises include refreshments or allow BYOB; others offer no food service. Check the listing details when booking options become available.",
+        },
+        {
+          question: "Is a Nights of Lights boat tour worth it?",
+          answer:
+            "Yes, for most visitors during the holiday season. The water perspective adds something you genuinely cannot get from land — unobstructed views of illuminated buildings, reflections on the Matanzas River, and the Bridge of Lions framed against the evening sky. If you are already in St. Augustine during the event, a boat tour is one of the better ways to experience it.",
+        },
+        {
+          question: "Can I combine a Nights of Lights boat tour with dinner?",
+          answer:
+            "Yes — this is a popular combination. Many operators depart from downtown waterfront areas, making it easy to book a reservation at a nearby restaurant before or after your cruise. Plan around your departure time and allow extra buffer for parking during the busy holiday season.",
         },
       ]}
     />

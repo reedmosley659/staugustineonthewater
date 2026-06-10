@@ -4,11 +4,35 @@ import { TrackedOperatorLink } from "@/components/TrackedOperatorLink";
 import { boatRentalOperators } from "@/lib/boat-rental-operators";
 import { getRelatedPages } from "@/lib/experience-pages";
 import { experienceRoutes } from "@/lib/routes";
-import { affiliateDisclosure, getSiteUrl, siteName } from "@/lib/site";
+import { affiliateDisclosure, getSiteUrl, siteName, whyTrustUsText } from "@/lib/site";
 import { Footer } from "./Footer";
 import { MobileStickyCTA } from "./MobileStickyCTA";
 
 const pagePath = experienceRoutes.boatRentals;
+
+const comparisonRows = [
+  {
+    type: "Pontoon Rental",
+    bestFor: "Families, relaxed groups, easy daytime cruising",
+    captain: "No (self-operated) or Optional",
+    duration: "2–4 hrs",
+    cost: "$–$$",
+  },
+  {
+    type: "Private Charter",
+    bestFor: "Celebrations, groups wanting flexibility and local route expertise",
+    captain: "Yes",
+    duration: "2–4 hrs",
+    cost: "$$–$$$",
+  },
+  {
+    type: "Premium Charter",
+    bestFor: "Anniversaries, special occasions, polished private experiences",
+    captain: "Yes",
+    duration: "2–4 hrs",
+    cost: "$$$–$$$$",
+  },
+] as const;
 
 const howToChooseTopics = [
   {
@@ -68,6 +92,21 @@ const faqs = [
     question: "Can I book a sunset boat rental in St Augustine?",
     answer:
       "Many operators offer late-afternoon and sunset departures, especially on private charters. Sunset timing shifts with the season, so confirm exact departure and return times for your date. For dedicated sunset cruises with narration, compare the sunset cruise guide as well.",
+  },
+  {
+    question: "How far in advance should I book a boat rental in St Augustine?",
+    answer:
+      "It depends on the date. Holidays and Saturdays from April through September fill quickly — booking two to four weeks ahead is a good idea for those windows. Fridays and Sundays often have availability within the same week, and weekdays typically allow last-minute bookings without much trouble.",
+  },
+  {
+    question: "Can I bring alcohol on a boat rental?",
+    answer:
+      "Many private charters allow BYOB; operators set their own rules. Some shared experiences include drinks and restrict outside beverages. Always confirm the policy directly with the operator when you book — rules vary and can affect what you plan to bring.",
+  },
+  {
+    question: "What happens if weather cancels my trip?",
+    answer:
+      "Most operators will offer to rebook you on another available date or provide a refund if conditions are unsafe. Captains monitor forecasts closely and are not looking to go out in storms any more than their guests are — if they cancel, it is for good reason. Review the operator's specific cancellation policy before booking.",
   },
 ] as const;
 
@@ -180,8 +219,11 @@ export function BoatRentalsMoneyPage() {
         </div>
       </section>
 
+      {/* Intro + comparison table share a white bg section */}
       <section className="bg-white py-16 lg:py-24">
+        {/* Intro text */}
         <div className="mx-auto max-w-3xl px-6 lg:px-8">
+          <p className="mb-6 text-xs text-navy/40">Last Updated: June 2026</p>
           <div className="space-y-4 text-base leading-relaxed text-navy/75">
             <p>
               St. Augustine boat rentals are not one-size-fits-all. Options vary
@@ -207,15 +249,79 @@ export function BoatRentalsMoneyPage() {
                 className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
               >
                 St Augustine sunset cruises
-              </Link>{" "}
-              or{" "}
+              </Link>
+              ,{" "}
               <Link
                 href="/dolphin-tours-st-augustine"
                 className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
               >
                 dolphin tours
               </Link>
-              .
+              , or{" "}
+              <Link
+                href="/nights-of-lights-boat-tours"
+                className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+              >
+                Nights of Lights boat tours
+              </Link>{" "}
+              for the holiday season.
+            </p>
+          </div>
+        </div>
+
+        {/* Comparison table */}
+        <div className="mx-auto mt-14 max-w-5xl px-6 lg:px-8">
+          <div className="mb-8">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-teal">
+              At a Glance
+            </p>
+            <h2 className="font-display mt-3 text-2xl font-semibold text-navy sm:text-3xl">
+              Which Boat Experience Fits Your Day?
+            </h2>
+          </div>
+          <div className="overflow-x-auto rounded-sm border border-sand-dark/80">
+            <table className="w-full min-w-[600px] text-sm">
+              <thead>
+                <tr className="bg-navy text-left text-xs font-semibold uppercase tracking-wide text-white">
+                  <th className="px-5 py-4">Experience Type</th>
+                  <th className="px-5 py-4">Best For</th>
+                  <th className="px-5 py-4">Captain Included?</th>
+                  <th className="px-5 py-4">Typical Duration</th>
+                  <th className="px-5 py-4">Typical Cost</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonRows.map((row, i) => (
+                  <tr
+                    key={row.type}
+                    className={i % 2 === 0 ? "bg-white" : "bg-sand/40"}
+                  >
+                    <td className="px-5 py-4 font-semibold text-navy">
+                      {row.type}
+                    </td>
+                    <td className="px-5 py-4 text-navy/70">{row.bestFor}</td>
+                    <td className="px-5 py-4 text-navy/70">{row.captain}</td>
+                    <td className="px-5 py-4 text-navy/70">{row.duration}</td>
+                    <td className="px-5 py-4 font-medium text-navy">
+                      {row.cost}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          {/* Typical cost expectations */}
+          <div className="mt-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+              Typical Cost Expectations
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-navy/70">
+              Cost guide: $ = budget-friendly · $$ = mid-range · $$$ = premium ·
+              $$$$ = luxury. Ranges are per-outing estimates and vary by season,
+              group size, and operator. Fuel, gratuity, and captain fees may be
+              itemized separately — always confirm what is included when you check
+              availability.
             </p>
           </div>
         </div>
@@ -370,7 +476,15 @@ export function BoatRentalsMoneyPage() {
           <h2 className="font-display mt-3 text-3xl font-semibold text-navy sm:text-4xl">
             Frequently Asked Questions
           </h2>
-          <dl className="mt-10 space-y-6">
+          <div className="mt-6 rounded-sm border border-sand-dark/60 bg-sand/30 px-6 py-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-teal">
+              How We Choose
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-navy/70">
+              {whyTrustUsText}
+            </p>
+          </div>
+          <dl className="mt-8 space-y-6">
             {faqs.map((faq) => (
               <div
                 key={faq.question}

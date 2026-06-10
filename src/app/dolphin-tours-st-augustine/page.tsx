@@ -16,6 +16,7 @@ export default function StAugustineDolphinToursPage() {
       path="/dolphin-tours-st-augustine"
       eyebrow="St. Augustine, Florida"
       title="St Augustine Dolphin Tours"
+      lastUpdated="June 2026"
       operators={dolphinTourOperators}
       operatorPage="dolphin_tours_st_augustine"
       operatorSectionTitle="Top Dolphin Tour Options in St Augustine"
@@ -43,19 +44,26 @@ export default function StAugustineDolphinToursPage() {
           <p>
             This guide covers what St Augustine dolphin tours typically involve,
             who they work best for, and how they compare to other on-the-water
-            options like a{" "}
+            options. Prefer flexibility and your own schedule? Compare a{" "}
             <Link
               href="/boat-rentals-st-augustine"
               className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
             >
               private boat rental
-            </Link>{" "}
-            or a{" "}
+            </Link>
+            . Looking for an evening experience? See{" "}
             <Link
               href="/sunset-cruises-st-augustine"
               className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
             >
-              St Augustine sunset cruise
+              St Augustine sunset cruises
+            </Link>{" "}
+            or, during the holiday season,{" "}
+            <Link
+              href="/nights-of-lights-boat-tours"
+              className="text-teal underline underline-offset-2 transition-colors hover:text-navy"
+            >
+              Nights of Lights boat tours
             </Link>
             .
           </p>
@@ -125,6 +133,29 @@ export default function StAugustineDolphinToursPage() {
             "Many tours run during daylight hours when visibility is best. Morning trips can be calmer; midday trips suit flexible schedules.",
         },
       ]}
+      bestMonths={[
+        {
+          title: "Spring — March through May",
+          description:
+            "Water temps rise from about 65°F to 78°F as dolphins become more active with increasing food availability. Air temps of 70–83°F make for comfortable conditions. A strong window before summer crowds peak.",
+        },
+        {
+          title: "Summer — June through August",
+          description:
+            "Water reaches 82–85°F — the warmest of the year. Dolphin feeding activity tends to be highest in summer. Morning departures often have the calmest estuary conditions before afternoon sea breezes build.",
+        },
+        {
+          title: "Fall — September & October",
+          description:
+            "Water stays warm at 77–82°F and dolphin activity remains high. Air temps ease to 80–87°F with lower humidity than summer — often excellent conditions with fewer crowds.",
+        },
+        {
+          title: "Winter — November through February",
+          description:
+            "Water cools to 60–68°F. Dolphins slow down but remain present in the area year-round. Sightings are less predictable but possible on any day. Air temps of 64–72°F are mild for being on the water.",
+        },
+      ]}
+      bestMonthsTitle="Best Months for Dolphin Tours Near St Augustine"
       howToChoose={[
         {
           title: "Set realistic wildlife expectations",
@@ -192,6 +223,17 @@ export default function StAugustineDolphinToursPage() {
           question: "What should I bring on a dolphin tour?",
           answer:
             "Sunscreen, sunglasses, a hat, and a light layer for breeze are common essentials. Some travelers bring binoculars. Check whether the operator allows food or drinks on board.",
+        },
+        {
+          question: "Are dolphin tours worth it even if we don't see dolphins?",
+          answer:
+            "In most cases, yes. The trip covers scenic estuary and river routes with nature commentary, even on days when dolphins stay hidden. Operators put real effort into searching productive areas. That said, go for the overall water experience rather than expecting a guaranteed sighting — that way you're set up to enjoy the trip regardless.",
+        },
+        {
+          question:
+            "Is a dolphin tour or a private boat rental better for seeing dolphins?",
+          answer:
+            "A guided dolphin tour is typically better for wildlife sightings — captains know the productive search areas and the trip is specifically designed around finding dolphins. A private boat rental gives you flexibility but without a guide's local expertise. If seeing dolphins is the main goal, a guided tour is the stronger choice.",
         },
       ]}
     />
