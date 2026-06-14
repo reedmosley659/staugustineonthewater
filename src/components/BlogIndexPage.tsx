@@ -5,6 +5,14 @@ import { Footer } from "./Footer";
 
 const guides = [
   {
+    href: blogRoutes.sunsetVsDolphin,
+    category: "Experience Comparison",
+    title: "Sunset Cruise vs Dolphin Tour in St. Augustine: Which Should You Choose?",
+    description:
+      "Traveling with kids? Book a dolphin tour. Adults-only trip? A 21+ sunset cruise with live music and drinks is hard to beat. Quick recommendations for families, couples, and groups of friends.",
+    updated: "June 2026",
+  },
+  {
     href: blogRoutes.boatRentalCost,
     category: "Boat Rental Guide",
     title: "How Much Does a Boat Rental Cost in St. Augustine? (2026 Pricing Guide)",

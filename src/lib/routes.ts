@@ -10,6 +10,7 @@ export const experienceRoutes = {
 export const blogRoutes = {
   index: "/blog",
   boatRentalCost: "/blog/boat-rental-cost-st-augustine",
+  sunsetVsDolphin: "/blog/sunset-cruise-vs-dolphin-tour-st-augustine",
 } as const;
 
 /** Legacy paths — permanently redirected to experienceRoutes in next.config.ts. */
