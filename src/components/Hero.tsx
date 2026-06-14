@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
+import { experienceRoutes } from "@/lib/routes";
 import { Header } from "./Header";
 import { Button } from "./Button";
 
@@ -52,9 +54,24 @@ export function Hero() {
             St Augustine Water Experiences, Boat Rentals &amp; Cruises
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85 sm:text-xl">
-            Compare boat rentals, sunset cruises, dolphin tours, seasonal
-            cruises, and other unforgettable ways to experience St. Augustine
-            from the water.
+            Compare{" "}
+            <Link href={experienceRoutes.boatRentals} className="text-white underline underline-offset-2 transition-colors hover:text-gold-light">
+              boat rentals
+            </Link>
+            ,{" "}
+            <Link href={experienceRoutes.sunsetCruises} className="text-white underline underline-offset-2 transition-colors hover:text-gold-light">
+              sunset cruises
+            </Link>
+            ,{" "}
+            <Link href={experienceRoutes.dolphinTours} className="text-white underline underline-offset-2 transition-colors hover:text-gold-light">
+              dolphin tours
+            </Link>
+            ,{" "}
+            <Link href={experienceRoutes.nightsOfLights} className="text-white underline underline-offset-2 transition-colors hover:text-gold-light">
+              seasonal cruises
+            </Link>
+            , and other unforgettable ways to experience St. Augustine from the
+            water.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Button as="a" href="#experiences" variant="primary">
